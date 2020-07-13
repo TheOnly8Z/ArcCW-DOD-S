@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Klappspaten"
 SWEP.Trivia_Class = "Melee Weapon"
-SWEP.Trivia_Desc = "Sharp metal blade for stabbing and slashing."
+SWEP.Trivia_Desc = "German made entrenching tool sharp enough to cause severe damage."
 SWEP.Trivia_Manufacturer = "Cold Steel"
 SWEP.Trivia_Calibre = "N/A"
 SWEP.Trivia_Mechanism = "Sharp Edge"
@@ -18,8 +18,8 @@ SWEP.NotForNPCs = true
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/c_spade.mdl"
-SWEP.WorldModel = "models/weapons/w_spade.mdl"
+SWEP.ViewModel = "models/weapons/c_klappspaten.mdl"
+SWEP.WorldModel = "models/weapons/w_klappspaten.mdl"
 SWEP.ViewModelFOV = 70
 
 SWEP.PrimaryBash = true
