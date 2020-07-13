@@ -233,7 +233,7 @@ SWEP.Animations = {
     },
     ["bash"] = {
         Source = "punch",
-        Time = 1,
+        Time = 0.5,
     },
     ["draw"] = {
         Source = "draw",
