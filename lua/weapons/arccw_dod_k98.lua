@@ -508,11 +508,15 @@ SWEP.Animations = {
     },
     ["gl_fire"] = {
         Source = "gl_fire",
-        Time = 0.5,
+        Time = 0.7,
+        TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
+        TPAnimStartTime = 0,
     },
     ["gl_reload"] = {
         Source = "gl_reload",
         Time = 2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        TPAnimStartTime = 0,
         SoundTable = {
             {s = "weapons/arccw/dod/grenade_reloadk98.wav", t = 0.9},
         }

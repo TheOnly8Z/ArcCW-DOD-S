@@ -83,7 +83,7 @@ SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
 SWEP.SpeedMult = 0.60
 SWEP.SightedSpeedMult = 0.3
-SWEP.SightTime = 0.5
+SWEP.SightTime = 0.4
 SWEP.VisualRecoilMult = 1
 SWEP.RecoilRise = 1
 
@@ -160,7 +160,7 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = "muzzle",
-        VMScale = Vector(1.5, 1.5, 1.5),
+        VMScale = Vector(2, 2, 2),
         WMScale = Vector(1.5, 1.5, 1.5),
         Bone = "ValveBiped._30cal_base",
         Offset = {
@@ -187,6 +187,7 @@ SWEP.Attachments = {
         Hidden = true,
         Slot = {"dod_m1919_bipod"},
         InstalledEles = {"bipod"},
+        Installed = "dod_m1919_bipod",
     },
     {
         PrintName = "Tactical",
