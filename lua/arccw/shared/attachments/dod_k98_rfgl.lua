@@ -5,7 +5,6 @@ att.Desc_Pros = {
     "+ Selectable grenade launcher",
 }
 att.Desc_Cons = {
-    "- Blocks underbarrel launchers",
     "- Cannot aim when using launcher"
 }
 att.AutoStats = true
@@ -38,7 +37,7 @@ att.UBGL_Fire = function(wep, ubgl)
 
     wep:PlayAnimation("gl_fire")
 
-    wep:FireRocket("arccw_gl_he", 20000)
+    wep:FireRocket("arccw_gl_k98_he", 20000)
 
     wep:EmitSound("weapons/arccw/dod/grenade_shoot.wav", 100)
 
@@ -52,7 +51,7 @@ att.UBGL_Reload = function(wep, ubgl)
 
     if Ammo(wep) <= 0 then return end
 
-    wep:SetNextSecondaryFire(CurTime() + 1)
+    wep:SetNextSecondaryFire(CurTime() + 2)
 
     wep:PlayAnimation("gl_reload")
 
