@@ -6,10 +6,10 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "Adler M40"
 SWEP.TrueName = "MP40"
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "Nazi Germany's standard issue submachine gun. After the Battle of Stalingrad more and more platoons were equipped entirely with this SMG in an attempt to match the Soviet's PPSh-41 capacity in short-range urban combat."
+SWEP.Trivia_Desc = "German standard issue submachine gun. While German combat doctrine did not rely on infantry firepower, more units were equipped with SMGs following the battle at Stalingrad."
 SWEP.Trivia_Manufacturer = "Erma Werke"
-SWEP.Trivia_Calibre = "9x19mm Para"
-SWEP.Trivia_Mechanism = "Gas-Operated"
+SWEP.Trivia_Calibre = "9x19mm"
+SWEP.Trivia_Mechanism = "Gas-operated"
 SWEP.Trivia_Country = "Nazi Germany"
 SWEP.Trivia_Year = 1940
 
@@ -21,14 +21,14 @@ end
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/c_dods_mp40.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_dod_mp40.mdl"
 SWEP.WorldModel = "models/weapons/w_dods_mp40.mdl"
 SWEP.ViewModelFOV = 54
 
-SWEP.Damage = 26
-SWEP.DamageMin = 15 -- damage done at maximum range
+SWEP.Damage = 28
+SWEP.DamageMin = 16 -- damage done at maximum range
 SWEP.Range = 50 -- in METRES
-SWEP.Penetration = 5
+SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 400 -- projectile or phys bullet muzzle velocity
@@ -40,11 +40,11 @@ SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 32 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 64
-SWEP.ReducedClipSize = 24
+SWEP.ExtendedClipSize = 48
+SWEP.ReducedClipSize = 16
 
 SWEP.Recoil = 0.45
-SWEP.RecoilSide = 0.35
+SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 1
 
 SWEP.Delay = 60 / 550 -- 60 / RPM.
@@ -58,12 +58,12 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.NPCWeaponType = "weapon_ar2"
-SWEP.NPCWeight = 200
+SWEP.NPCWeaponType = "weapon_smg1"
+SWEP.NPCWeight = 70
 
-SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 100
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "mp40" -- the magazine pool this gun draws from
@@ -71,7 +71,7 @@ SWEP.MagID = "mp40" -- the magazine pool this gun draws from
 SWEP.ShootVol = 100 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "^weapons/arccw/dod/mp40_shoot.wav"
+SWEP.ShootSound = "ArcCW_DOD_MP40.Shoot"
 SWEP.ShootSoundSilenced = "weapons/arccw/usp/usp1.wav"
 SWEP.DistantShootSound = nil --"weapons/arccw/ak47/ak47-1-distant.wav"
 
@@ -124,14 +124,18 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.BarrelLength = 27
 
-SWEP.ExtraSightDist = 5
+SWEP.ExtraSightDist = -10
 
 SWEP.AttachmentElements = {
-    ["noch"] = {
+    ["reducedmag"] = {
+        VMBodygroups = {{ind = 1, bg = 2}},
+        WMBodygroups = {{ind = 1, bg = 2}},
+    },
+    ["extendedmag"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
         WMBodygroups = {{ind = 1, bg = 1}},
     },
-    ["reducedmag"] = {
+    ["noch"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
         WMBodygroups = {{ind = 2, bg = 1}},
     },
@@ -141,10 +145,6 @@ SWEP.AttachmentElements = {
         Mult_Recoil = 0.7,
         Mult_MoveSpeed = 0.9,
     },
-    /*["extendedmag"] = {
-        VMBodygroups = {{ind = 2, bg = 2}},
-        WMBodygroups = {{ind = 2, bg = 2}},
-    },*/
 }
 
 SWEP.Attachments = {
@@ -152,25 +152,25 @@ SWEP.Attachments = {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
         Slot = {"optic_lp", "optic"}, -- what kind of attachments can fit here, can be string or table
-        Bone = "v_mp40.handle", -- relevant bone any attachments will be mostly referring to
+        Bone = "v_mp40.attachpos", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(9.6, 2.55, -5.8), -- offset that the attachment will be relative to the bone
-            vang = Angle(174.5, 197, 0),
+            vpos = Vector(0, -0.5, -2.5),  --Vector(9.6, 2.55, -5.8), 
+            vang = Angle(90, 0, -90), --Angle(174.5, 197, 0),
             wpos = Vector(7.765, 1.175, -5.75),
             wang = Angle(170, -180, 0),
         },
         InstalledEles = {"noch"},
-        CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(3.55, -33, 0)
+        CorrectivePos = Vector(-1.91, -15, -15.35),
+        CorrectiveAng = Angle(0, 0, 100)
     },
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = "muzzle",
-        Bone = "v_mp40.mag_release",
+        Bone = "v_mp40.attachpos",
         Offset = {
-            vpos = Vector(-0.5, -1.25, 11.5),
-            vang = Angle(90, 0, 0),
+            vpos = Vector(0, 0.3, 14),
+            vang = Angle(90, 0, -90),
             wpos = Vector(24, 1.175, -7.9),
             wang = Angle(-190, 180, 0)
         },
@@ -178,9 +178,9 @@ SWEP.Attachments = {
     {
         PrintName = "Tactical",
         Slot = "tac",
-        Bone = "v_mp40.mag_release",
+        Bone = "v_mp40.attachpos",
         Offset = {
-            vpos = Vector(-1.125, -1, 0),
+            vpos = Vector(-0.5, 0, 0),
             vang = Angle(90, 0, 180),
             wpos = Vector(7.765, 0.5, -4),
             wang = Angle(170, 180, -90),
@@ -233,18 +233,18 @@ SWEP.Animations = {
     },
     ["bash"] = {
         Source = "punch",
-        Time = 1,
+        Time = 0.5,
     },
     ["draw"] = {
         Source = "draw",
         Time = 0.4,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0.25,
+        LHIKOut = 1,
     },
     ["ready"] = {
-        Source = "draw",
-        Time = 1,
+        Source = "ready",
+        Time = 1.2,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
@@ -255,13 +255,13 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
-        Source = {"shoot1"},
+        Source = "shoot_iron",
         Time = 1,
         ShellEjectAt = 0,
     },
     ["reload"] = {
-        Source = "reload",
-        Time = 3,
+        Source = "reload_wet",
+        Time = 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
@@ -271,7 +271,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload",
-        Time = 3.5,
+        Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
