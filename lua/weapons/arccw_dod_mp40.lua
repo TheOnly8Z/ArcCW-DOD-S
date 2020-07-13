@@ -58,8 +58,8 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.NPCWeaponType = "weapon_ar2"
-SWEP.NPCWeight = 200
+SWEP.NPCWeaponType = "weapon_smg1"
+SWEP.NPCWeight = 70
 
 SWEP.AccuracyMOA = 25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
