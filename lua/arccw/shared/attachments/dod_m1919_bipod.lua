@@ -15,8 +15,8 @@ att.Slot = "dod_m1919_bipod"
 att.Free = true
 
 att.Bipod = true
-att.Mult_BipodRecoil = 0.2
-att.Mult_BipodDispersion = 0.2
+att.Mult_BipodRecoil = 0.15
+att.Mult_BipodDispersion = 0.25
 
 att.Mult_SightTime = 1.1
 att.Mult_HipDispersion = 1.1
