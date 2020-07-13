@@ -257,40 +257,91 @@ sound.Add({
     name = "ArcCW_DOD_M1911.Shoot",
     channel = CHAN_WEAPON,
     level = 70,
-    sound = "weapons/arccw/dod/colt_shoot.wav"
+    sound = "^weapons/arccw/dod/colt_shoot.wav"
 })
 
 sound.Add({
     name = "ArcCW_DOD_M1911.ClipOut",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/dod/colt_clipout.wav"
+    sound = "^weapons/arccw/dod/colt_clipout.wav"
 })
 
 sound.Add({
     name = "ArcCW_DOD_M1911.ClipIn",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/dod/colt_clipin.wav"
+    sound = "^weapons/arccw/dod/colt_clipin.wav"
 })
 
 sound.Add({
     name = "ArcCW_DOD_M1911.BoltBack",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/dod/colt_boltback.wav"
+    sound = "^weapons/arccw/dod/colt_boltback.wav"
 })
 
 sound.Add({
     name = "ArcCW_DOD_M1911.BoltForward",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/dod/colt_boltforward.wav"
+    sound = "^weapons/arccw/dod/colt_boltforward.wav"
 })
 
 sound.Add({
     name = "ArcCW_DOD_M1911.WorldReload",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/dod/colt_worldreload.wav"
+    sound = "^weapons/arccw/dod/colt_worldreload.wav"
+})
+
+-- M1 Carbine -------------------------------------------------------------------------------
+
+sound.Add({
+    name = "ArcCW_DOD_M1Carbine.Shoot",
+    channel = CHAN_WEAPON,
+    level = 70,
+    sound = "^weapons/arccw/dod/m1carbine_shoot.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1Carbine.ClipIn1",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/m1carbine_clipin1.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1Carbine.ClipIn2",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/m1carbine_clipin2.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1Carbine.ClipOut",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/m1carbine_clipout.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1Carbine.BoltBack",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/m1carbine_boltback.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1Carbine.BoltForward",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/m1carbine_boltforward.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1Carbine.WorldReload",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/m1carbine_worldreload.wav"
 })

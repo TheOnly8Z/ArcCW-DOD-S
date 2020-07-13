@@ -71,7 +71,7 @@ SWEP.MagID = "m1carbine" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "^weapons/arccw/dod/m1carbine_shoot.wav"
+SWEP.ShootSound = "ArcCW_DOD_M1Carbine.Shoot"
 SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
 SWEP.DistantShootSound = nil --"weapons/arccw/ak47/ak47-1-distant.wav"
 
