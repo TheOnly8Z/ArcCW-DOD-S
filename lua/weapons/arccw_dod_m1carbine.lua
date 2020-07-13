@@ -6,10 +6,10 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "M1942C"
 SWEP.TrueName = "M1 Carbine"
 SWEP.Trivia_Class = "Semi-Automatic Carbine"
-SWEP.Trivia_Desc = "Lightweight semi-automatic carbine used by the United States during World War 2. While it's size and weight made it easy to carry, it's stopping power was only higher than the pistols and submachineguns of the era."
-SWEP.Trivia_Manufacturer = "Multiple"
+SWEP.Trivia_Desc = "Lightweight semi-automatic carbine used by the United States during World War 2. Intended as a weapon issued to support troops, it is more powerful than most submachine guns but weaker than rifles of that era."
+SWEP.Trivia_Manufacturer = "General Motors"
 SWEP.Trivia_Calibre = ".30 Carbine"
-SWEP.Trivia_Mechanism = "Gas-Operated (short-stroke piston), rotating bolt."
+SWEP.Trivia_Mechanism = "Gas-operated Rotating Bolt"
 SWEP.Trivia_Country = "United States of America"
 SWEP.Trivia_Year = 1942
 
@@ -66,7 +66,7 @@ SWEP.HipDispersion = 600 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
 SWEP.Primary.Ammo = "smg1" -- what ammo type the gun uses
-SWEP.MagID = "m1942c" -- the magazine pool this gun draws from
+SWEP.MagID = "m1carbine" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
@@ -164,10 +164,16 @@ SWEP.AttachmentElements = {
     ["fcg_auto"] = {
         TrueNameChange = "M3 Carbine",
         NameChange = "M1945A1",
-        Trivia_Desc = "Select-fire variant that allows for fully automatic fire and mount for a scope.",
-        Trivia_Class = "Selective-fire Carbine"
+        --Trivia_Desc = "Select-fire variant that allows for fully automatic fire and mount for a scope.",
+        --Trivia_Class = "Selective-fire Carbine"
     }
 }
+
+SWEP.Hook_SelectReloadAnimation = function(wep, anim)
+    if wep:GetCapacity() == wep.ExtendedClipSize then
+        return anim .. "_extend"
+    end
+end
 
 SWEP.Attachments = {
     {
@@ -277,20 +283,19 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"shoot", "shoot2", "shoot3"},
-        Time = 0.5,
+        Time = 1,
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
         Source = {"shoot"},
-        Time = 0.5,
+        Time = 0.8,
         ShellEjectAt = 0,
     },
     ["reload"] = {
-        Source = "reload",
+        Source = "reload_wet",
         Time = 2.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
+        FrameRate = 32,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
@@ -299,8 +304,25 @@ SWEP.Animations = {
         Source = "reload",
         Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
+        FrameRate = 32,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+    ["reload_extend"] = {
+        Source = "reload_wet_extend",
+        Time = 2.5,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 32,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+    ["reload_empty_extend"] = {
+        Source = "reload_extend",
+        Time = 3,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 32,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
