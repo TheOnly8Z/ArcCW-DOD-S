@@ -25,9 +25,9 @@ SWEP.ViewModel = "models/weapons/arccw/c_dod_m1carbine.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_m1carbine.mdl"
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 29
-SWEP.DamageMin = 20 -- damage done at maximum range
-SWEP.Range = 270 -- in METRES
+SWEP.Damage = 32
+SWEP.DamageMin = 18 -- damage done at maximum range
+SWEP.Range = 75 -- in METRES
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -43,8 +43,8 @@ SWEP.Primary.ClipSize = 15 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 30
 SWEP.ReducedClipSize = 10
 
-SWEP.Recoil = 0.65
-SWEP.RecoilSide = 0.5
+SWEP.Recoil = 0.5
+SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 1
 
 SWEP.Delay = 60 / 750 -- 60 / RPM.
@@ -61,9 +61,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 170
 
-SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 600 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.AccuracyMOA = 12 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 400 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 100
 
 SWEP.Primary.Ammo = "smg1" -- what ammo type the gun uses
 SWEP.MagID = "m1carbine" -- the magazine pool this gun draws from
@@ -83,9 +83,9 @@ SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
-SWEP.SpeedMult = 1
-SWEP.SightedSpeedMult = 0.65
-SWEP.SightTime = 0.2
+SWEP.SpeedMult = 0.94
+SWEP.SightedSpeedMult = 0.8
+SWEP.SightTime = 0.27
 SWEP.VisualRecoilMult = 0.75
 SWEP.RecoilRise = 0.75
 

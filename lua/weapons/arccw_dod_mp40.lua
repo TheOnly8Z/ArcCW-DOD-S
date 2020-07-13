@@ -176,6 +176,17 @@ SWEP.Attachments = {
         },
     },
     {
+        PrintName = "Underbarrel",
+        Slot = {"bipod", "style_pistol"},
+        Bone = "v_mp40.attachpos",
+        Offset = {
+            vpos = Vector(0, 0.3, 12),
+            vang = Angle(90, 0, -90),
+            wpos = Vector(24, 1.175, -7.9),
+            wang = Angle(-190, 180, 0)
+        },
+    },
+    {
         PrintName = "Tactical",
         Slot = "tac",
         Bone = "v_mp40.attachpos",
