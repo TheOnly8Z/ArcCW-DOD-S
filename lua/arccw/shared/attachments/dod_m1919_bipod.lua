@@ -21,5 +21,3 @@ att.Mult_BipodDispersion = 0.2
 att.Mult_SightTime = 1.1
 att.Mult_HipDispersion = 1.1
 att.Mult_SpeedMult = 0.95
-
-att.Override_Bipod_Integral = true

@@ -18,6 +18,20 @@ sound.Add({
     }
 })
 
+sound.Add({
+    name = "ArcCW_DOD.Bipod_Down",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/mg42_deploybipod.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD.Bipod_Up",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/mg42_raisebipod.wav"
+})
+
 -- M1 Garand ----------------------------------------------------------------------------
 
 sound.Add({
@@ -120,7 +134,7 @@ sound.Add({
     sound = "weapons/arccw/dod/k98_boltforward2.wav"
 })
 
--- Kar98k -------------------------------------------------------------------------------
+-- MP40 ---------------------------------------------------------------------------------
 
 sound.Add({
     name = "ArcCW_DOD_MP40.Shoot",
@@ -155,4 +169,56 @@ sound.Add({
     channel = CHAN_ITEM,
     level = 70,
     sound = "weapons/arccw/dod/mp40_boltforward.wav"
+})
+
+-- M1919 --------------------------------------------------------------------------------
+
+sound.Add({
+    name = "ArcCW_DOD_M1919.Shoot",
+    channel = CHAN_WEAPON,
+    level = 120,
+    sound = "^weapons/arccw/dod/30cal_shoot.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1919.CoverUp",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/30cal_coverup.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1919.CoverDown",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/30cal_coverdown.wav"
+})
+
+
+sound.Add({
+    name = "ArcCW_DOD_M1919.BulletChain1",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/30cal_bulletchain1.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1919.BulletChain2",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/30cal_bulletchain2.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1919.BoltBack",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/30cal_boltback.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1919.BoltForward",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/30cal_boltforward.wav"
 })
