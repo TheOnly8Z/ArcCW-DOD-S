@@ -30,7 +30,7 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_dod_m1911.mdl"
-SWEP.WorldModel = "models/weapons/w_pist_usp.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_dod_m1911.mdl"
 SWEP.ViewModelFOV = 56
 
 SWEP.Damage = 32
@@ -83,7 +83,7 @@ SWEP.MagID = "m1911" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "weapons/arccw/usp/usp_unsilenced_03.wav"
+SWEP.ShootSound = "ArcCW_DOD_M1911.Shoot"
 SWEP.ShootSoundSilenced = "weapons/arccw/usp/usp_01.wav"
 SWEP.DistantShootSound = "weapons/arccw/hkp2000/hkp2000-1-distant.wav"
 

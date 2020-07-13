@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Trench Knife"
 SWEP.Trivia_Class = "Melee Weapon"
-SWEP.Trivia_Desc = "Sharp metal blade for stabbing and slashing with a guard shaped as brass knuckles to provide a better grip, and possibly ."
+SWEP.Trivia_Desc = "Sharp metal blade for stabbing and slashing with a guard shaped as brass knuckles to provide a better grip, and possibly punching harder."
 SWEP.Trivia_Manufacturer = "Cold Steel"
 SWEP.Trivia_Calibre = "N/A"
 SWEP.Trivia_Mechanism = "Sharp Edge"
