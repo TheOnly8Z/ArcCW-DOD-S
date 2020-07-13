@@ -226,7 +226,6 @@ SWEP.Attachments = {
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     if wep:GetNWBool("bipod", false) and wep.Animations[anim .. "_bipod"] then
-        print(anim)
         return anim .. "_bipod"
     end
 end
