@@ -8,6 +8,34 @@ sound.Add({
 })
 
 sound.Add({
+    name = "ArcCW_DOD.Draw_Pistol",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/draw_pistol.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD.Draw_Grenade",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/draw_grenade.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD.Draw_Knife",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/draw_knife.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD.Draw_Spade",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/draw_spade.wav"
+})
+
+sound.Add({
     name = "ArcCW_DOD.Movement",
     channel = CHAN_ITEM - 5,
     level = 70,
@@ -221,4 +249,48 @@ sound.Add({
     channel = CHAN_ITEM,
     level = 70,
     sound = "^weapons/arccw/dod/30cal_boltforward.wav"
+})
+
+-- M1911 -------------------------------------------------------------------------------
+
+sound.Add({
+    name = "ArcCW_DOD_M1911.Shoot",
+    channel = CHAN_WEAPON,
+    level = 70,
+    sound = "weapons/arccw/dod/colt_shoot.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1911.ClipOut",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/colt_clipout.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1911.ClipIn",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/colt_clipin.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1911.BoltBack",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/colt_boltback.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1911.BoltForward",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/colt_boltforward.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_M1911.WorldReload",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/colt_worldreload.wav"
 })
