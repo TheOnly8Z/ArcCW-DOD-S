@@ -2,7 +2,7 @@ AddCSLuaFile()
 
 ENT.Type 				= "anim"
 ENT.Base 				= "base_entity"
-ENT.PrintName 			= "HE Round"
+ENT.PrintName 			= "K98 Grenade"
 ENT.Author 				= ""
 ENT.Information 		= ""
 
@@ -45,7 +45,7 @@ end
 else
 
 function ENT:Think()
-    if self.Ticks % 5 == 0 then
+    if self.Ticks % 4 == 0 then
         local emitter = ParticleEmitter(self:GetPos())
 
         if !self:IsValid() or self:WaterLevel() > 2 then return end
@@ -61,7 +61,7 @@ function ENT:Think()
         smoke:SetEndSize( 100 )
         smoke:SetRoll( math.Rand(-180, 180) )
         smoke:SetRollDelta( math.Rand(-0.2,0.2) )
-        smoke:SetColor( 20, 20, 20 )
+        smoke:SetColor( 100, 100, 100 )
         smoke:SetAirResistance( 5 )
         smoke:SetPos( self:GetPos() )
         smoke:SetLighting( false )

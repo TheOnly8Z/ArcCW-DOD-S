@@ -1,6 +1,6 @@
 att.PrintName = "Schiessbecher"
 att.Icon = Material("entities/acwatt_dod_k98_rfgl.png", "mips smooth")
-att.Description = "Muzzle attachment that allows for the loading and firing of rifle grenades. Less cumbersome than modern underbarrel launchers, but has less range and power."
+att.Description = "Muzzle attachment that allows for the loading and firing of explosive rifle grenades. Less cumbersome than modern underbarrel launchers, but has less range and power."
 att.Desc_Pros = {
     "+ Selectable grenade launcher",
 }
@@ -51,7 +51,7 @@ att.UBGL_Reload = function(wep, ubgl)
 
     if Ammo(wep) <= 0 then return end
 
-    wep:SetNextSecondaryFire(CurTime() + 2)
+    wep:SetNextSecondaryFire(CurTime() + 2.2)
 
     wep:PlayAnimation("gl_reload")
 
@@ -69,6 +69,6 @@ att.UBGL_Reload = function(wep, ubgl)
 end
 
 att.Mult_AccuracyMOA = 1.5
-att.Mult_SightTime = 1.15
-att.Mult_HipDispersion = 1.2
+att.Mult_SightTime = 1.1
+att.Mult_HipDispersion = 1.15
 att.Add_BarrelLength = 5
