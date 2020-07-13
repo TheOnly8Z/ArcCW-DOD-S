@@ -21,8 +21,8 @@ end
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/c_m1a1_thomp.mdl"
-SWEP.WorldModel = "models/weapons/w_m1a1_thomp.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_dod_thompson.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_dod_thompson.mdl"
 SWEP.ViewModelFOV = 65
 
 SWEP.Damage = 34
@@ -71,7 +71,7 @@ SWEP.MagID = "thompson" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "^weapons/arccw/dod/thompson_shoot.wav"
+SWEP.ShootSound = "ArcCW_DOD_Thompson.Shoot"
 SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
 SWEP.DistantShootSound = nil --"weapons/arccw/ak47/ak47-1-distant.wav"
 
