@@ -18,8 +18,8 @@ SWEP.NotForNPCs = true
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/c_m24_stick.mdl"
-SWEP.WorldModel = "models/weapons/w_m24_stick.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_dod_de_grenade.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_dod_de_grenade.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.FuseTime = 4.5

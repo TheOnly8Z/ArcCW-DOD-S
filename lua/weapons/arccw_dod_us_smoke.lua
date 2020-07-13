@@ -18,8 +18,8 @@ SWEP.NotForNPCs = true
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/c_m18_smoke.mdl"
-SWEP.WorldModel = "models/weapons/w_m18_smoke.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_dod_us_smoke.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_dod_us_smoke.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.FuseTime = 3.5

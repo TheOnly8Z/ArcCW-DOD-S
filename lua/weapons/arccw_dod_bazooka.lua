@@ -14,8 +14,8 @@ SWEP.Trivia_Year = "1942"
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/c_bazooka.mdl"
-SWEP.WorldModel = "models/weapons/w_bazooka.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_dod_bazooka.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_dod_bazooka.mdl"
 
 SWEP.Damage = 200
 SWEP.DamageMin = 75 -- damage done at maximum range

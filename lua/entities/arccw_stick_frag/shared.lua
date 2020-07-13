@@ -6,7 +6,7 @@ ENT.Information = ""
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
-ENT.Model = "models/weapons/p_m24_stick.mdl"
+ENT.Model = "models/weapons/arccw/p_dod_de_grenade.mdl"
 ENT.FuseTime = 4.5
 ENT.ArmTime = 0
 ENT.ImpactFuse = false

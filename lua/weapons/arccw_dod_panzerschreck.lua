@@ -14,8 +14,8 @@ SWEP.Trivia_Year = "1943"
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/c_panzerschreck.mdl"
-SWEP.WorldModel = "models/weapons/w_pschreck.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_dod_panzerschreck.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_dod_panzerschreck.mdl"
 
 SWEP.Damage = 200
 SWEP.DamageMin = 75 -- damage done at maximum range

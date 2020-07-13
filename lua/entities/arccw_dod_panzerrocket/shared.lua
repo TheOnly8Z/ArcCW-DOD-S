@@ -9,7 +9,7 @@ ENT.Spawnable 			= false
 
 AddCSLuaFile()
 
-ENT.Model = "models/weapons/w_panzerschreck_rocket.mdl"
+ENT.Model = "models/weapons/arccw/w_dod_panzerschreck_rocket.mdl"
 ENT.Ticks = 0
 ENT.FuseTime = 10
 
