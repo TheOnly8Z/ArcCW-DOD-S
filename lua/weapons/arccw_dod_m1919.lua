@@ -5,10 +5,10 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Simmons H1919"
 SWEP.TrueName = "Browning M1919A6"
-SWEP.Trivia_Class = "Medium Machine Gun"
-SWEP.Trivia_Desc = "A .30 caliber machine gun made after the Great War and used by the United States Military during World War 2. It's greater capacity for suppresive fire made it almost completely replace the BAR's role."
+SWEP.Trivia_Class = "Machine Gun"
+SWEP.Trivia_Desc = "Air-cooled .30 caliber machine gun used in infantry support and vehicular roles. It is not as effective in suppression as its German counterpart, and is more commonly seen mounted after the war."
 SWEP.Trivia_Manufacturer = "Bison Guns Manufacturing"
-SWEP.Trivia_Calibre = ".30-06 Springfield"
+SWEP.Trivia_Calibre = ".30-06"
 SWEP.Trivia_Mechanism = "Recoil-operated"
 SWEP.Trivia_Country = "United States of America"
 SWEP.Trivia_Year = 1943
@@ -22,14 +22,14 @@ end
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/c_m1919a6.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_dod_m1919.mdl"
 SWEP.WorldModel = "models/weapons/w_m1919a6.mdl"
 SWEP.ViewModelFOV = 55
 
-SWEP.Damage = 45
+SWEP.Damage = 65
 SWEP.DamageMin = 30 -- damage done at maximum range
 SWEP.Range = 200 -- in METRES
-SWEP.Penetration = 15
+SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 850 -- projectile or phys bullet muzzle velocity
@@ -41,11 +41,11 @@ SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 150
+SWEP.ExtendedClipSize = 200
 SWEP.ReducedClipSize = 50
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 0.6
+SWEP.Recoil = 1.6
+SWEP.RecoilSide = 1
 SWEP.RecoilRise = 1
 
 SWEP.Delay = 60 / 600 -- 60 / RPM.
@@ -57,16 +57,16 @@ SWEP.Firemodes = {
 }
 
 SWEP.NPCWeaponType = "weapon_ar2"
-SWEP.NPCWeight = 200
+SWEP.NPCWeight = 50
 
 SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 850 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.HipDispersion = 700 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 400
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.MagID = "m1919" -- the magazine pool this gun draws from
 
-SWEP.ShootVol = 115 -- volume of shoot sound
+SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "^weapons/arccw/dod/30cal_shoot.wav"
@@ -82,8 +82,8 @@ SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
 SWEP.SpeedMult = 0.60
-SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.33
+SWEP.SightedSpeedMult = 0.3
+SWEP.SightTime = 0.5
 SWEP.VisualRecoilMult = 1
 SWEP.RecoilRise = 1
 
@@ -116,8 +116,8 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, 0, 2)
-SWEP.ActiveAng = Angle(0, 0, 9)
+SWEP.ActivePos = Vector(0, 0, 1)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -185,7 +185,7 @@ SWEP.Attachments = {
     },
     {
         Hidden = true,
-        Slot = {"bipod"},
+        Slot = {"dod_m1919_bipod"},
         InstalledEles = {"bipod"},
     },
     {
@@ -224,43 +224,42 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    if wep:GetNWBool("bipod", false) and wep.Animations[anim .. "_bipod"] then
+        print(anim)
+        return anim .. "_bipod"
+    end
+end
+
 SWEP.Animations = {
     ["idle"] = {
         Source = {"upidle"},
---        "upidle1", "upidle2", "upidle3", "upidle4", "upidle5", "upidle6", "upidle7", "upidle8",
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.4,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 1,
-    },
-    ["ready"] = {
-        Source = "draw",
-        Time = 1,
+        Time = 1.5,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 1,
     },
     ["fire"] = {
         Source = {"upshoot", "upshoot_2", "upshoot_3"},
-        Time = 0.5,
+        Time = 1,
         ShellEjectAt = 0,
     },
-    ["fire_empty"] = {
-        Source = "upshoot1",
-        Time = 0.5,
+    ["fire_bipod"] = {
+        Source = {"downshoot", "downshoot_2", "downshoot_3"},
+        Time = 1,
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
-        Source = {"upshoot"},
-        Time = 0.5,
+        Source = "upshoot",
+        Time = 1,
         ShellEjectAt = 0,
     },
     ["reload"] = {
-        Source = "reload",
-        Time = 4,
+        Source = "reload_wet_up",
+        Time = 4.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
@@ -269,13 +268,70 @@ SWEP.Animations = {
         LHIKOut = 0.5,
     },
     ["reload_empty"] = {
-        Source = "reload",
-        Time = 4,
+        Source = "reload_up",
+        Time = 4.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
+    },
+    ["reload_bipod"] = {
+        Source = "reload_wet",
+        Time = 4.5,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Framerate = 37,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+    ["reload_empty_bipod"] = {
+        Source = "reload",
+        Time = 4.5,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Framerate = 37,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+    ["enter_bipod"] = {
+        Source = "uptodown",
+        Time = 1,
+    },
+    ["exit_bipod"] = {
+        Source = "downtoup",
+        Time = 1,
+    },
+    ["exit_sight_bipod"] = {
+        Source = "uptodown",
+        Time = 1,
+    },
+    ["enter_sight_bipod"] = {
+        Source = "downtoup",
+        Time = 1,
+    },
+    ["idle_bipod"] = {
+        Source = "downidle",
+        Time = 1,
+    },
+    ["idle_sight_bipod"] = {
+        Source = "upidle",
+        Time = 1,
+    },
+    -- Unused, but required to trick ArcCW into putting the animation into TranslateAnimation (so we can do the bipod one)
+    ["enter_sight"] = {
+        Source = "upidle",
+        Time = 0,
+    },
+    ["exit_sight"] = {
+        Source = "upidle",
+        Time = 0,
+    },
+    ["idle_sight"] = {
+        Source = "upidle",
+        Time = 0,
     },
 }
