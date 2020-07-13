@@ -4,8 +4,8 @@ SWEP.Category = "ArcCW - DOD:S" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Wagner M1938"
-SWEP.TrueName = "Walther P38"
-SWEP.Trivia_Class = "Machine Pistol"
+SWEP.TrueName = "P38"
+SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "9mm semi-automatic pistol used as the standard issue side arm of the Third Reich."
 SWEP.Trivia_Manufacturer = "Wagner GmbH."
 SWEP.Trivia_Calibre = "9x19mm Para"
@@ -71,9 +71,9 @@ SWEP.MagID = "wp38" -- the magazine pool this gun draws from
 SWEP.ShootVol = 110 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "^weapons/p38_shoot.wav"
+SWEP.ShootSound = "^weapons/arccw/dod/p38_shoot.wav"
 SWEP.ShootSoundSilenced = "weapons/arccw/usp/usp_01.wav"
-SWEP.DistantShootSound = "weapons/arccw/glock18/glock18-1-distant.wav"
+SWEP.DistantShootSound = nil --"weapons/arccw/glock18/glock18-1-distant.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"

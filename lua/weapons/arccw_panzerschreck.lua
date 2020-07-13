@@ -78,7 +78,7 @@ SWEP.MagID = "rocket88m" -- the magazine pool this gun draws from
 SWEP.ShootVol = 125 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "weapons/rocket1.wav"
+SWEP.ShootSound = "weapons/arccw/dod/rocket1.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_5"
 

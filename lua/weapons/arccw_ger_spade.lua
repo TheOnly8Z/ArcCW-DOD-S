@@ -36,9 +36,9 @@ SWEP.Melee2Range = 40
 SWEP.Melee2Time = 2
 SWEP.Melee2AttackTime = 0.25
 
-SWEP.MeleeSwingSound = "weapons/blade_swing.wav"
-SWEP.MeleeHitSound = "weapons/blade_hitworld.wav"
-SWEP.MeleeHitNPCSound = "weapons/blade_hit3.wav"
+SWEP.MeleeSwingSound = "weapons/arccw/dod/blade_swing.wav"
+SWEP.MeleeHitSound = "weapons/arccw/dod/blade_hitworld.wav"
+SWEP.MeleeHitNPCSound = "weapons/arccw/dod/blade_hit3.wav"
 
 SWEP.MeleeGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE
 SWEP.Melee2Gesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE2
@@ -63,12 +63,12 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 0.75,
---        SoundTable = {{s = "weapons/draw_spade.wav", t = 0}}
+--        SoundTable = {{s = "weapons/arccw/dod/draw_spade.wav", t = 0}}
     },
     ["ready"] = {
         Source = "draw",
         Time = 0.75,
---        SoundTable = {{s = "weapons/draw_spade.wav", t = 0}}
+--        SoundTable = {{s = "weapons/arccw/dod/draw_spade.wav", t = 0}}
     },
     ["bash"] = {
         Source = {"slash1", "slash2"},

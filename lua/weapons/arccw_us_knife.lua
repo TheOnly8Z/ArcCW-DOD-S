@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - DOD:S" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Mk. I Trench Knife"
+SWEP.PrintName = "Trench Knife"
 SWEP.Trivia_Class = "Melee Weapon"
 SWEP.Trivia_Desc = "Sharp metal blade for stabbing and slashing with a guard shaped as brass knuckles to provide a better grip, and possibly ."
 SWEP.Trivia_Manufacturer = "Cold Steel"
@@ -36,9 +36,9 @@ SWEP.Melee2Range = 32
 SWEP.Melee2Time = 1.2
 SWEP.Melee2AttackTime = 0.25
 
-SWEP.MeleeSwingSound = "weapons/blade_swing.wav"
-SWEP.MeleeHitSound = "weapons/blade_hitworld.wav"
-SWEP.MeleeHitNPCSound = "weapons/blade_hit1.wav"
+SWEP.MeleeSwingSound = "weapons/arccw/dod/blade_swing.wav"
+SWEP.MeleeHitSound = "weapons/arccw/dod/blade_hitworld.wav"
+SWEP.MeleeHitNPCSound = "weapons/arccw/dod/blade_hit1.wav"
 
 SWEP.MeleeGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_FIST
 SWEP.Melee2Gesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE

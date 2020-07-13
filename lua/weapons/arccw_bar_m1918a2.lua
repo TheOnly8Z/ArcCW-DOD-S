@@ -75,9 +75,9 @@ SWEP.MagID = "mkb44h" -- the magazine pool this gun draws from
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "^weapons/bar_shoot.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
-SWEP.DistantShootSound = "weapons/arccw/ak47/ak47-1-distant.wav"
+SWEP.ShootSound = "^weapons/arccw/dod/bar_shoot.wav"
+SWEP.ShootSoundSilenced = "weapons/arccw/dod/arccw/m4a1/m4a1_silencer_01.wav"
+SWEP.DistantShootSound = "weapons/arccw/dod/arccw/ak47/ak47-1-distant.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"
