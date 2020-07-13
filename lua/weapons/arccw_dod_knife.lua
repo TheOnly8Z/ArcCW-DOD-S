@@ -18,8 +18,8 @@ SWEP.NotForNPCs = true
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/c_us_knife.mdl"
-SWEP.WorldModel = "models/weapons/w_us_knife.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_dod_us_knife.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_dod_us_knife.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.PrimaryBash = true

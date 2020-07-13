@@ -7,7 +7,7 @@ SWEP.PrintName = "Government .45"
 SWEP.TrueName = "M1911A1"
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "One of the first semi-automatic pistols, this design was a staple and lasted over a century. God created man, but Samuel Colt made them equal."
+SWEP.Trivia_Desc = "One of the first semi-automatic pistols, this design was a staple and lasted over a century. For John made the 1911, and lo all of his weapons, from the designs which I, the Lord, gave him upon the mountain."
 SWEP.Trivia_Manufacturer = "Browning Arms"
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Short Recoil"

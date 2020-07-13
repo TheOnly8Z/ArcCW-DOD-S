@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - DOD:S" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Wagner M1938"
-SWEP.TrueName = "P38"
+SWEP.TrueName = "Walther P38"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "9mm semi-automatic pistol used as the standard issue side arm of the Third Reich."
 SWEP.Trivia_Manufacturer = "Wagner GmbH."
@@ -22,8 +22,8 @@ end
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/c_wp38.mdl"
-SWEP.WorldModel = "models/weapons/w_wp38.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_dod_p38.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_dod_wp38.mdl"
 SWEP.ViewModelFOV = 65
 
 SWEP.Damage = 23
