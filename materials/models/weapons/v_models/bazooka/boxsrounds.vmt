@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	// Original shader: VertexLitTexture
+	"$baseTexture" "models\weapons\v_models\bazooka/BoxSRounds"
+}
