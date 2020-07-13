@@ -27,7 +27,7 @@ SWEP.ViewModelFOV = 54
 
 SWEP.Damage = 26
 SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.Range = 80 -- in METRES
+SWEP.Range = 50 -- in METRES
 SWEP.Penetration = 5
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -43,8 +43,8 @@ SWEP.Primary.ClipSize = 32 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 64
 SWEP.ReducedClipSize = 24
 
-SWEP.Recoil = 0.50
-SWEP.RecoilSide = 0.5
+SWEP.Recoil = 0.45
+SWEP.RecoilSide = 0.35
 SWEP.RecoilRise = 1
 
 SWEP.Delay = 60 / 550 -- 60 / RPM.
@@ -62,17 +62,17 @@ SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 200
 
 SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 600 -- inaccuracy added by hip firing.
+SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "mp40" -- the magazine pool this gun draws from
 
-SWEP.ShootVol = 115 -- volume of shoot sound
+SWEP.ShootVol = 100 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "^weapons/arccw/dod/mp40_shoot.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
+SWEP.ShootSoundSilenced = "weapons/arccw/usp/usp1.wav"
 SWEP.DistantShootSound = nil --"weapons/arccw/ak47/ak47-1-distant.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_smg"
@@ -83,9 +83,10 @@ SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
-SWEP.SpeedMult = 1
-SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.33
+SWEP.SpeedMult = 0.92
+SWEP.SightedSpeedMult = 0.8
+SWEP.SightTime = 0.25
+
 SWEP.VisualRecoilMult = 1
 SWEP.RecoilRise = 1
 
@@ -107,7 +108,7 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg"
+SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "smg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
@@ -137,8 +138,8 @@ SWEP.AttachmentElements = {
     ["stock"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
         WMBodygroups = {{ind = 3, bg = 1}},
-        Mult_Recoil = 0.5,
-        Mult_MoveSpeed = 0.95,
+        Mult_Recoil = 0.7,
+        Mult_MoveSpeed = 0.9,
     },
     /*["extendedmag"] = {
         VMBodygroups = {{ind = 2, bg = 2}},
@@ -250,17 +251,17 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"shoot1", "shoot2", "shoot3"},
-        Time = 0.5,
+        Time = 1,
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
-        Source = {"idle"},
-        Time = 0,
+        Source = {"shoot1"},
+        Time = 1,
         ShellEjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 2.5,
+        Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
@@ -270,7 +271,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload",
-        Time = 2.5,
+        Time = 3.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
