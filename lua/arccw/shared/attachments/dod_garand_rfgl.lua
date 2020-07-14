@@ -1,6 +1,6 @@
-att.PrintName = "Schiessbecher"
-att.Icon = Material("entities/acwatt_dod_k98_rfgl.png", "mips smooth")
-att.Description = "Muzzle attachment that allows for the loading and firing of explosive rifle grenades. The cup allows for quick reload and firing, but the projectiles are less powerful than US rifle grenades."
+att.PrintName = "M7 Grenade Launcher"
+att.Icon = Material("entities/acwatt_dod_garand_rfgl.png", "mips smooth")
+att.Description = "Muzzle attachment that allows for the loading and firing of explosive rifle grenades. Top-affixed mounting mechanism allows for a larger payload, but is more cumbersome to fire."
 att.Desc_Pros = {
     "+ Selectable grenade launcher",
 }
@@ -8,7 +8,7 @@ att.Desc_Cons = {
     "- Cannot aim when using launcher"
 }
 att.AutoStats = true
-att.Slot = "dod_k98_rfgl"
+att.Slot = "dod_garand_rfgl"
 att.SortOrder = 100
 
 att.MountPositionOverride = 0
@@ -35,9 +35,9 @@ end
 att.UBGL_Fire = function(wep, ubgl)
     if wep:Clip2() <= 0 then return end
 
-    wep:PlayAnimation("gl_fire")
+    wep:PlayAnimation("fire_ubgl")
 
-    wep:FireRocket("arccw_gl_k98_he", 20000)
+    wep:FireRocket("arccw_gl_k98_he", 25000)
 
     wep:EmitSound("weapons/arccw/dod/grenade_shoot.wav", 100)
 
@@ -51,9 +51,9 @@ att.UBGL_Reload = function(wep, ubgl)
 
     if Ammo(wep) <= 0 then return end
 
-    wep:SetNextSecondaryFire(CurTime() + 2.2)
+    wep:SetNextSecondaryFire(CurTime() + 3.2)
 
-    wep:PlayAnimation("gl_reload")
+    wep:PlayAnimation("reload_ubgl")
 
     local reserve = Ammo(wep)
 

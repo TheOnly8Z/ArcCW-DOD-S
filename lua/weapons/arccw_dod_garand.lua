@@ -121,7 +121,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 
-SWEP.ActivePos = Vector(-2, 2, 3)
+SWEP.ActivePos = Vector(-2, 2, 2)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
@@ -133,6 +133,10 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.BarrelLength = 35
 
 SWEP.AttachmentElements = {
+    ["dod_garand_rfgl"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+        WMBodygroups = {},
+    },
     ["mount"] = {
         VMElements = {
             {
@@ -198,10 +202,11 @@ SWEP.Attachments = {
             wpos = Vector(35, 0.7, -9.3),
             wang = Angle(170, 180, 0)
         },
+        MergeSlots = {13}
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip", "ubgl", "bipod"},
+        Slot = {"foregrip", "bipod"},
         Bone = "ValveBiped.garand_base",
         Offset = {
             vpos = Vector(-2.25, 0.6, 20),
@@ -214,7 +219,8 @@ SWEP.Attachments = {
             vmax = Vector(-2.1, 0.6, 24),
             wmin = Vector(13, 0.7, -3.5),
             wmax = Vector(24, 0.7, -6.3),
-        }
+        },
+        MergeSlots = {12}
     },
     {
         PrintName = "Tactical",
@@ -250,6 +256,43 @@ SWEP.Attachments = {
         PrintName = "Perk",
         Slot = "perk"
     },
+    {
+        PrintName = "Charm",
+        Slot = "charm",
+        FreeSlot = true,
+        Bone = "ValveBiped.garand_base",
+        Offset = {
+            vpos = Vector(-2, 0.6, 28),
+            vang = Angle(90, 0, 0),
+            wpos = Vector(27, 0.7, -7),
+            wang = Angle(170, 180, 0)
+        },
+    },
+    { -- 12
+        Hidden = true,
+        Slot = "ubgl",
+        Bone = "ValveBiped.garand_base",
+        Offset = {
+            vpos = Vector(-2.25, 0.6, 20),
+            vang = Angle(90, 0, 0),
+            wpos = Vector(14.329, 0.602, -4.453),
+            wang = Angle(-10.216, 0, 180)
+        },
+        SlideAmount = {
+            vmin = Vector(-1.2, 0.6, 14),
+            vmax = Vector(-2.1, 0.6, 24),
+            wmin = Vector(13, 0.7, -3.5),
+            wmax = Vector(24, 0.7, -6.3),
+        },
+        GivesFlags = {"dod_ubgl"},
+        ExcludeFlags = {"dod_rfgl"}
+    },
+    { -- 13
+        Hidden = true,
+        Slot = "dod_garand_rfgl",
+        ExcludeFlags = {"dod_ubgl"},
+        GivesFlags = {"dod_rfgl"}
+    }
 }
 
 SWEP.Animations = {
@@ -287,6 +330,7 @@ SWEP.Animations = {
         SoundTable = {
             {
                 t = 0,
+                s = "ArcCW_DOD_Garand.ClipDing",
                 e = "arccw_shell_dod_enbloc",
                 att = 4,
                 mag = 120,
@@ -305,6 +349,7 @@ SWEP.Animations = {
         SoundTable = {
             {
                 t = 0,
+                s = "ArcCW_DOD_Garand.ClipDing",
                 e = "arccw_shell_dod_enbloc",
                 att = 4,
                 mag = 120,
@@ -326,4 +371,58 @@ SWEP.Animations = {
         FrameRate = 30,
         LHIK = false,
     },
+
+    ["idle_ubgl"] = {
+        Source = "idle_ubgl",
+        Time = 1,
+    },
+    ["idle_ubgl_empty"] = {
+        Source = "idle_ubgl_empty",
+        Time = 1,
+    },
+    ["enter_ubgl"] = {
+        Source = "enter_ubgl",
+        Time = 3,
+        SoundTable = {
+            {s = "weapons/arccw/dod/grenade_reloadgarand1.wav", t = 0.5},
+            {s = "weapons/arccw/dod/grenade_reloadgarand2.wav", t = 1.4},
+            {s = "weapons/arccw/dod/grenade_reloadgarand3.wav", t = 1.6},
+            {s = "weapons/arccw/dod/grenade_reloadgarand4.wav", t = 2.2},
+        }
+    },
+    ["enter_ubgl_empty"] = {
+        Source = "enter_ubgl_empty",
+        Time = 0.3,
+    },
+    ["exit_ubgl"] = {
+        Source = "exit_ubgl",
+        Time = 2,
+        SoundTable = {
+            {s = "weapons/arccw/dod/grenade_reloadgarand1.wav", t = 0.2},
+            {s = "weapons/arccw/dod/grenade_reloadgarand2.wav", t = 0.8},
+            {s = "weapons/arccw/dod/grenade_reloadgarand3.wav", t = 1},
+        }
+    },
+    ["exit_ubgl_empty"] = {
+        Source = "exit_ubgl_empty",
+        Time = 0.3,
+    },
+    ["fire_ubgl"] = {
+        Source = "fire_ubgl",
+        Time = 0.7,
+        TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
+        TPAnimStartTime = 0,
+    },
+    ["reload_ubgl"] = {
+        Source = "reload_ubgl",
+        Time = 3,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
+        TPAnimStartTime = 0,
+        SoundTable = {
+            {s = "weapons/arccw/dod/grenade_reloadgarand1.wav", t = 0.6},
+            {s = "weapons/arccw/dod/grenade_reloadgarand2.wav", t = 1.4},
+            {s = "weapons/arccw/dod/grenade_reloadgarand3.wav", t = 1.6},
+            {s = "weapons/arccw/dod/grenade_reloadgarand4.wav", t = 2.1},
+        }
+    }
 }
