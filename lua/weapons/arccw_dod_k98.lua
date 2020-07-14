@@ -508,10 +508,24 @@ SWEP.Animations = {
     },
     ["enter_ubgl"] = {
         Source = "gl_draw",
-        Time = 0.5,
+        Time = 2,
+        SoundTable = {
+            {s = "weapons/arccw/dod/grenade_reloadk98.wav", t = 0.9},
+        }
     },
     ["exit_ubgl"] = {
         Source = "gl_holster",
+        Time = 2,
+        SoundTable = {
+            {s = "weapons/arccw/dod/grenade_reloadk98.wav", t = 0.9},
+        }
+    },
+    ["enter_ubgl_empty"] = {
+        Source = "gl_draw_empty",
+        Time = 0.5,
+    },
+    ["exit_ubgl_empty"] = {
+        Source = "gl_holster_empty",
         Time = 0.5,
     },
     ["gl_fire"] = {
