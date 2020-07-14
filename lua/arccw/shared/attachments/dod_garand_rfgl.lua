@@ -32,6 +32,14 @@ att.Hook_ShouldNotSight = function(wep)
     if wep:GetNWBool("ubgl") then return true end
 end
 
+att.UBGL_NPCFire = function(wep, ubgl)
+    if wep:Clip2() <= 0 then return end
+    wep:FireRocket("arccw_gl_garand_he", 22000)
+    wep:EmitSound("weapons/arccw/dod/grenade_shoot.wav", 100)
+    wep:SetClip2(wep:Clip2() - 1)
+    wep:DoEffects()
+end
+
 att.UBGL_Fire = function(wep, ubgl)
     if wep:Clip2() <= 0 then return end
 
