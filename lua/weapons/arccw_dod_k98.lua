@@ -289,6 +289,7 @@ SWEP.Attachments = {
             wpos = Vector(13, 0.8, -7),
             wang = Angle(-10, 0, 180)
         },
+        CorrectivePos = Vector(0,0,0.025),
         KeepBaseIrons = true,
         GivesFlags = {"dod_scope"},
         ExcludeFlags = {"dod_clip"},
@@ -352,6 +353,13 @@ SWEP.Hook_SelectInsertAnimation = function(wep, data)
             anim = "sgreload_insert_optic",
             empty = data.empty
         }
+    end
+end
+
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    -- Only play anims on the RFGL
+    if not wep.Attachments[14].Installed and (anim == "enter_ubgl" or anim == "exit_ubgl" or anim == "idle_ubgl") then
+        return (anim == "idle_ubgl") and "idle" or false
     end
 end
 
