@@ -76,7 +76,7 @@ SWEP.MagID = "m96" -- the magazine pool this gun draws from
 SWEP.ShootVol = 110 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "^weapons/arccw/dod/c96_shoot.wav"
+SWEP.ShootSound = "ArcCW_DOD_C96.Shoot"
 SWEP.ShootSoundSilenced = "weapons/arccw/usp/usp_01.wav"
 SWEP.DistantShootSound = nil --"weapons/arccw/glock18/glock18-1-distant.wav"
 
