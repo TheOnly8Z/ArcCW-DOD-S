@@ -6,7 +6,7 @@ ENT.Information = ""
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
-ENT.Model = "models/weapons/arccw/p_dod_us_frag.mdl"
+ENT.Model = "models/weapons/arccw/w_dod_us_frag.mdl"
 ENT.FuseTime = 5
 ENT.ArmTime = 0
 ENT.ImpactFuse = false

@@ -19,7 +19,7 @@ SWEP.NotForNPCs = true
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_dod_us_frag.mdl"
-SWEP.WorldModel = "models/weapons/arccw/w_dod_us_frag.mdl"
+SWEP.WorldModel = "models/weapons/arccw/p_dod_us_frag.mdl"
 SWEP.ViewModelFOV = 60
 
 SWEP.FuseTime = 5

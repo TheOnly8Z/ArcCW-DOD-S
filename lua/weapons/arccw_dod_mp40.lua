@@ -22,7 +22,7 @@ end
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_dod_mp40.mdl"
-SWEP.WorldModel = "models/weapons/arccw/sw_dods_mp40.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_dod_mp40.mdl"
 SWEP.ViewModelFOV = 54
 
 SWEP.Damage = 28
@@ -108,8 +108,8 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "ar2"
-SWEP.HoldtypeSights = "smg"
+SWEP.HoldtypeActive = "smg"
+SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
@@ -244,7 +244,7 @@ SWEP.Animations = {
     },
     ["bash"] = {
         Source = "punch",
-        Time = 0.5,
+        Time = 1,
     },
     ["draw"] = {
         Source = "draw",

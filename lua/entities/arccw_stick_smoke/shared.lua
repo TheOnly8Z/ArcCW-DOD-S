@@ -6,7 +6,7 @@ ENT.Information = ""
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
-ENT.Model = "models/weapons/arccw/p_dod_de_smoke.mdl"
+ENT.Model = "models/weapons/arccw/w_dod_de_smoke.mdl"
 ENT.FuseTime = 3.5
 ENT.ArmTime = 0
 ENT.ImpactFuse = false

@@ -685,3 +685,19 @@ sound.Add({
     level = 70,
     sound = "^weapons/arccw/dod/grenade_spoon.wav"
 })
+
+-- Rockets shared --------------------------------------------------------------------------------------
+
+sound.Add({
+    name = "ArcCW_DOD.Rocket_Shoot",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/rocket1.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD.Rocket_ClipIn",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/rocket_clipin.wav"
+})

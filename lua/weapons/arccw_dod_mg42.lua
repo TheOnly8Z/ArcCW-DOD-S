@@ -143,8 +143,8 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(-0.1, -1.5, -2), -- offset that the attachment will be relative to the bone
             vang = Angle(90, 0, 0),
-            wpos = Vector(0, 0, 0),
-            wang = Angle(0, 0, 0)
+            wpos = Vector(7.5, 1.5, -6.5),
+            wang = Angle(-10, 0, 180)
         },
         CorrectiveAng = Angle(180, 180, 180),
     },
@@ -156,8 +156,8 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(-2, 0, 15),
             vang = Angle(90, 0, 0),
-            wpos = Vector(14.329, 1.5, -3.453),
-            wang = Angle(-6, 0, 180)
+            wpos = Vector(14.329, 1.5, -5),
+            wang = Angle(-10, 0, 180)
         },
         MergeSlots = {3},
     },
@@ -174,8 +174,8 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(-2, 0, 12),
             vang = Angle(90, 0, 0),
-            wpos = Vector(14.329, 1.5, -3.453),
-            wang = Angle(-6, 0, 180)
+            wpos = Vector(19, 1.5, -5.5),
+            wang = Angle(-10, 0, 180)
         },
     },
     {
@@ -227,12 +227,6 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        SoundTable = {
-            {
-                s = "weapons/arccw/m249/m249_draw.wav",
-                t = 0
-            }
-        },
         Time = 1.5
     },
     ["ready"] = {
