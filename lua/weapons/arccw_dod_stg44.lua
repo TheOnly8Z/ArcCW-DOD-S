@@ -24,8 +24,8 @@ end
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/c_stg44.mdl"
-SWEP.WorldModel = "models/weapons/w_stg44.mdl"
+SWEP.ViewModel = "models/weapons/arccw/c_dod_stg44.mdl"
+SWEP.WorldModel = "models/weapons/arccw/w_dod_stg44.mdl"
 SWEP.ViewModelFOV = 65
 
 SWEP.Damage = 35
