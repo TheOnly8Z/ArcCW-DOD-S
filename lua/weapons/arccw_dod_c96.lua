@@ -245,22 +245,10 @@ SWEP.Animations = {
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 0.75,
-        SoundTable = {
-            {
-            s = "weapons/arccw/usp/usp_draw.wav",
-            t = 0
-            }
-        }
     },
     ["draw"] = {
         Source = "draw",
         Time = 0.75,
-        SoundTable = {
-            {
-            s = "weapons/arccw/usp/usp_draw.wav",
-            t = 0
-            }
-        }
     },
     ["fire"] = {
         Source = {"shoot1", "shoot2", "shoot3"},

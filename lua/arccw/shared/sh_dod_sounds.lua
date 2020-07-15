@@ -15,13 +15,6 @@ sound.Add({
 })
 
 sound.Add({
-    name = "ArcCW_DOD.Draw_Grenade",
-    channel = CHAN_ITEM,
-    level = 70,
-    sound = "weapons/arccw/dod/draw_grenade.wav"
-})
-
-sound.Add({
     name = "ArcCW_DOD.Draw_Knife",
     channel = CHAN_ITEM,
     level = 70,
@@ -236,6 +229,94 @@ sound.Add({
     sound = "weapons/arccw/dod/thompson_boltforward.wav"
 })
 
+-- M1918A2 BAR ---------------------------------------------------------------------------------
+
+sound.Add({
+    name = "ArcCW_DOD_BAR.Shoot",
+    channel = CHAN_WEAPON,
+    level = 110,
+    sound = "^weapons/arccw/dod/bar_shoot.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_BAR.ClipIn1",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/bar_clipin.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_BAR.ClipIn2",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/bar_clipin2.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_BAR.ClipOut",
+    channel = CHAN_ITEM + 5,
+    level = 70,
+    sound = "weapons/arccw/dod/bar_clipout.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_BAR.BoltBack",
+    channel = CHAN_ITEM + 5,
+    level = 70,
+    sound = "weapons/arccw/dod/bar_boltback.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_BAR.BoltForward",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/bar_boltforward.wav"
+})
+
+-- STG-44 ---------------------------------------------------------------------------------
+
+sound.Add({
+    name = "ArcCW_DOD_STG44.Shoot",
+    channel = CHAN_WEAPON,
+    level = 110,
+    sound = "^weapons/arccw/dod/mp44_shoot.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_STG44.ClipIn1",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/mp44_clipin.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_STG44.ClipIn2",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/mp44_clipin2.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_STG44.ClipOut",
+    channel = CHAN_ITEM + 5,
+    level = 70,
+    sound = "weapons/arccw/dod/mp44_clipout.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_STG44.BoltBack",
+    channel = CHAN_ITEM + 5,
+    level = 70,
+    sound = "weapons/arccw/dod/mp44_boltback.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_STG44.BoltForward",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/mp44_boltforward.wav"
+})
+
 -- M1919 --------------------------------------------------------------------------------
 
 sound.Add({
@@ -286,6 +367,57 @@ sound.Add({
     channel = CHAN_ITEM,
     level = 70,
     sound = "^weapons/arccw/dod/30cal_boltforward.wav"
+})
+
+-- MG42 --------------------------------------------------------------------------------
+
+sound.Add({
+    name = "ArcCW_DOD_MG42.Shoot",
+    channel = CHAN_WEAPON,
+    level = 120,
+    sound = "^weapons/arccw/dod/mg42_shoot.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_MG42.CoverUp",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/mg42_coverup.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_MG42.CoverDown",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/mg42_coverdown.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_MG42.BulletChain1",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/mg42_bulletchain1.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_MG42.BulletChain2",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/mg42_bulletchain2.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_MG42.BoltBack",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/mg42_boltback.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_MG42.BoltForward",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/mg42_boltforward.wav"
 })
 
 -- M1 Carbine -------------------------------------------------------------------------------
@@ -432,4 +564,124 @@ sound.Add({
     channel = CHAN_ITEM,
     level = 70,
     sound = "^weapons/arccw/dod/colt_worldreload.wav"
+})
+
+-- Walther P38 -------------------------------------------------------------------------------
+
+sound.Add({
+    name = "ArcCW_DOD_P38.Shoot",
+    channel = CHAN_WEAPON,
+    level = 70,
+    sound = "^weapons/arccw/dod/p38_shoot.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_P38.ClipOut",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/p38_clipout.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_P38.ClipIn",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/p38_clipin.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_P38.BoltBack",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/p38_boltback.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_P38.BoltForward",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/p38_boltforward.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_P38.WorldReload",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arccw/dod/p38_worldreload.wav"
+})
+
+-- Trench Knife -------------------------------------------------------------------------------
+
+sound.Add({
+    name = "ArcCW_DOD_Knife.Swing",
+    channel = CHAN_WEAPON,
+    level = 70,
+    sound = "^weapons/arccw/dod/blade_swing.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_Knife.HitWorld",
+    channel = CHAN_WEAPON,
+    level = 70,
+    sound = "^weapons/arccw/dod/blade_hitworld.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_Knife.Hit",
+    channel = CHAN_WEAPON,
+    level = 70,
+    sound = "^weapons/arccw/dod/blade_hit1.wav"
+})
+
+-- Spade --------------------------------------------------------------------------------------
+
+sound.Add({
+    name = "ArcCW_DOD_Spade.Swing",
+    channel = CHAN_WEAPON,
+    level = 70,
+    sound = "^weapons/arccw/dod/blade_swing.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_Spade.HitWorld",
+    channel = CHAN_WEAPON,
+    level = 70,
+    sound = "^weapons/arccw/dod/blade_hitworld.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD_Spade.Hit",
+    channel = CHAN_WEAPON,
+    level = 70,
+    sound = "^weapons/arccw/dod/blade_hit3.wav"
+})
+
+-- Grenades Shared. --------------------------------------------------------------------------------------
+
+sound.Add({
+    name = "ArcCW_DOD.Draw_Grenade",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "weapons/arccw/dod/draw_grenade.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD.Grenade_PinPull",
+    channel = CHAN_WEAPON,
+    level = 70,
+    sound = "^weapons/arccw/dod/grenade_pinpull.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD.Grenade_Spoon",
+    channel = CHAN_WEAPON,
+    level = 70,
+    sound = "^weapons/arccw/dod/grenade_spoon.wav"
+})
+
+sound.Add({
+    name = "ArcCW_DOD.Grenade_String",
+    channel = CHAN_WEAPON,
+    level = 70,
+    sound = "^weapons/arccw/dod/grenade_spoon.wav"
 })

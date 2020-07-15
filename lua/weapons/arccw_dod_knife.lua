@@ -36,9 +36,9 @@ SWEP.Melee2Range = 32
 SWEP.Melee2Time = 1.2
 SWEP.Melee2AttackTime = 0.25
 
-SWEP.MeleeSwingSound = "weapons/arccw/dod/blade_swing.wav"
-SWEP.MeleeHitSound = "weapons/arccw/dod/blade_hitworld.wav"
-SWEP.MeleeHitNPCSound = "weapons/arccw/dod/blade_hit1.wav"
+SWEP.MeleeSwingSound = "ArcCW_DOD_Knife.Swing"
+SWEP.MeleeHitSound = "ArcCW_DOD_Knife.HitWorld"
+SWEP.MeleeHitNPCSound = "ArcCW_DOD_Knife.Hit"
 
 SWEP.MeleeGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_FIST
 SWEP.Melee2Gesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
