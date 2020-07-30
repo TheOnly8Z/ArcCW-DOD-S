@@ -120,6 +120,8 @@ SWEP.MeleeAttackTime = 0.2
 SWEP.ActivePos = Vector(-3, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
+SWEP.CustomizePos = Vector(8, 0, -1)
+
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-4.633, 36.881, 0)
 
