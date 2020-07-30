@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "M18A2 Patton"
 SWEP.TrueName = "M1918A2 BAR"
 SWEP.Trivia_Class = "Battle Rifle"
-SWEP.Trivia_Desc = "Select-fire rifle developed based on the concept of 'walking fire', which involved firing the weapon while charging the enemy trench. In practice, the weapon fit more in the role of light machine guns, and its specs are similar to battle rifles."
+SWEP.Trivia_Desc = "Select-fire rifle developed based on the concept of 'walking fire', which involved firing the weapon while charging the enemy trench. In practice, the weapon played a role similar to light machine guns during WWII.\n\nRate-reducing mechanism allows the toggling of fast and slow automatic fire, the slow mode offering more recoil stability and control."
 SWEP.Trivia_Manufacturer = "Winchester"
 SWEP.Trivia_Calibre = ".30-06"
 SWEP.Trivia_Mechanism = "Gas-Operated"
@@ -43,16 +43,24 @@ SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 10
 
-SWEP.Recoil = 1.4
+SWEP.Recoil = 1
 SWEP.RecoilSide = 0.8
 SWEP.VisualRecoilMult = 1
 SWEP.RecoilRise = 1
 
-SWEP.Delay = 60 / 500 -- 60 / RPM.
+SWEP.Delay = 60 / 550 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 2,
+        PrintName = "FAST",
+    },
+    {
+        Mode = 2,
+        PrintName = "SLOW",
+        Mult_RPM = 0.63,
+        Mult_Recoil = 0.7,
+        Mult_RecoilSide = 0.7
     },
     {
         Mode = 1,
@@ -92,7 +100,7 @@ SWEP.SightedSpeedMult = 0.65
 SWEP.SightTime = 0.35
 
 SWEP.VisualRecoilMult = 1
-SWEP.RecoilRise = 1
+SWEP.RecoilRise = 0.2
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -105,7 +113,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector (-6.25, -6.7881, 5.5349),
+    Pos = Vector (-6.25, -6.7881, 5.57),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -137,16 +145,14 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 1}},
         WMBodygroups = {{ind = 1, bg = 1}},
     },
-    --[[w
     ["reducedmag"] = {
-        VMBodygroups = {{ind = 2, bg = 1}},
-        WMBodygroups = {{ind = 2, bg = 1}},
-    },
-    ["extendedmag"] = {
         VMBodygroups = {{ind = 2, bg = 2}},
         WMBodygroups = {{ind = 2, bg = 2}},
     },
-    --]]
+    ["extendedmag"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
+        WMBodygroups = {{ind = 2, bg = 1}},
+    },
 }
 
 SWEP.Attachments = {
@@ -249,6 +255,12 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.Hook_SelectReloadAnimation = function(wep, anim)
+    if wep:GetCapacity() == wep.ExtendedClipSize then
+        return anim .. "_extend"
+    end
+end
+
 SWEP.Animations = {
     ["idle"] = false,
     ["draw"] = {
@@ -281,6 +293,26 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "up_reload",
+        Time = 3,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Framerate = 37,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+    ["reload_extend"] = {
+        Source = "up_reload_tactical_thick",
+        Time = 2.5,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Framerate = 37,
+        Checkpoints = {28, 38, 69},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+    ["reload_empty_extend"] = {
+        Source = "up_reload_thick",
         Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
