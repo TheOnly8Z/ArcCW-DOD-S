@@ -248,7 +248,7 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = false,
     ["draw"] = {
-        Source = "up_draw",
+        Source = "up_draw_tactical",
         Time = 0.4,
         LHIK = true,
         LHIKIn = 0,
@@ -272,7 +272,7 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["reload"] = {
-        Source = "up_reload",
+        Source = "up_reload_tactical",
         Time = 2.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,

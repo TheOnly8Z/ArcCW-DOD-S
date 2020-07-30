@@ -249,7 +249,7 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = false,
     ["draw"] = {
-        Source = "draw",
+        Source = "draw_tactical",
         Time = 0.4,
         LHIK = true,
         LHIKIn = 0,
@@ -268,13 +268,13 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
-        Source = {"shoot1"},
+        Source = {"idle"},
         Time = 0,
         ShellEjectAt = 0,
     },
     ["reload"] = {
-        Source = "reload",
-        Time = 2.5,
+        Source = "reload_tactical",
+        Time = 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
@@ -284,7 +284,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload",
-        Time = 3,
+        Time = 2.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
