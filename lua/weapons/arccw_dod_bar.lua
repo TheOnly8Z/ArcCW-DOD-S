@@ -5,15 +5,15 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M18A2 Patton"
 SWEP.TrueName = "M1918A2 BAR"
-SWEP.Trivia_Class = "Automatic Rifle"
-SWEP.Trivia_Desc = "Select-fire between semi-auto and full auto, a rifle developed based on the concept of 'walking fire', which involved firing the weapon while charging the enemy trench. In practice the weapon was used more often as a light machine gun."
+SWEP.Trivia_Class = "Battle Rifle"
+SWEP.Trivia_Desc = "Select-fire rifle developed based on the concept of 'walking fire', which involved firing the weapon while charging the enemy trench. In practice, the weapon fit more in the role of light machine guns, and its specs are similar to battle rifles."
 SWEP.Trivia_Manufacturer = "Winchester"
-SWEP.Trivia_Calibre = ".30-06 Springfield"
+SWEP.Trivia_Calibre = ".30-06"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "United States of America"
 SWEP.Trivia_Year = 1917
 
-SWEP.Slot = 2
+SWEP.Slot = 3
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
@@ -25,10 +25,10 @@ SWEP.ViewModel = "models/weapons/arccw/c_dod_bar.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_bar.mdl"
 SWEP.ViewModelFOV = 65
 
-SWEP.Damage = 35
-SWEP.DamageMin = 25 -- damage done at maximum range
-SWEP.Range = 150 -- in METRES
-SWEP.Penetration = 10
+SWEP.Damage = 42
+SWEP.DamageMin = 28 -- damage done at maximum range
+SWEP.Range = 100 -- in METRES
+SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 1100 -- projectile or phys bullet muzzle velocity
@@ -43,8 +43,8 @@ SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 10
 
-SWEP.Recoil = 0.65
-SWEP.RecoilSide = 0.5
+SWEP.Recoil = 1.4
+SWEP.RecoilSide = 0.8
 SWEP.VisualRecoilMult = 1
 SWEP.RecoilRise = 1
 
@@ -63,14 +63,14 @@ SWEP.Firemodes = {
 }
 
 SWEP.NPCWeaponType = "weapon_ar2"
-SWEP.NPCWeight = 200
+SWEP.NPCWeight = 100
 
-SWEP.AccuracyMOA = 15 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 850 -- inaccuracy added by hip firing.
+SWEP.AccuracyMOA = 12 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 800 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
-SWEP.MagID = "mkb44h" -- the magazine pool this gun draws from
+SWEP.MagID = "bar" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
@@ -87,9 +87,10 @@ SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
-SWEP.SpeedMult = 0.85
+SWEP.SpeedMult = 0.8
 SWEP.SightedSpeedMult = 0.65
-SWEP.SightTime = 0.33
+SWEP.SightTime = 0.35
+
 SWEP.VisualRecoilMult = 1
 SWEP.RecoilRise = 1
 
@@ -121,13 +122,13 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(8, -1, -1)
 
-SWEP.HolsterPos = Vector(0.532, -6, 0)
+SWEP.HolsterPos = Vector(4, 0, 2)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
-SWEP.BarrelLength = 27
+SWEP.BarrelLength = 32
 
 SWEP.ExtraSightDist = 5
 
@@ -136,7 +137,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 1}},
         WMBodygroups = {{ind = 1, bg = 1}},
     },
-    /*
+    --[[w
     ["reducedmag"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
         WMBodygroups = {{ind = 2, bg = 1}},
@@ -145,7 +146,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 2, bg = 2}},
         WMBodygroups = {{ind = 2, bg = 2}},
     },
-    */
+    --]]
 }
 
 SWEP.Attachments = {
@@ -175,6 +176,7 @@ SWEP.Attachments = {
             wpos = Vector(35, 0.85, -9.5),
             wang = Angle(-10, 0, 0)
         },
+        VMScale = Vector(1.5, 1.5, 1.5),
     },
     {
         PrintName = "Underbarrel",
@@ -251,17 +253,11 @@ SWEP.Animations = {
     ["idle"] = false,
     ["draw"] = {
         Source = "up_draw_tactical",
-        Time = 0.4,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
+        Time = 0.8,
     },
     ["ready"] = {
         Source = "up_draw",
-        Time = 1,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
+        Time = 1.5,
     },
     ["fire"] = {
         Source = {"up_shoot1", "up_shoot2", "up_shoot3"},
@@ -269,7 +265,7 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
-        Source = {"up_idle"},
+        Source = "up_idle",
         Time = 0,
         ShellEjectAt = 0,
     },
