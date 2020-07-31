@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "M1942 Annihilator"
 SWEP.TrueName = "M1A1 Thompson"
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "Developed for trench combat during the Great War, the Thompson SMG was the first to be described as a 'Sub-Machinegun'. It however did not see widespread active military service until 1938, when World War 2 started. By 1942, the United States Military had simplified the internal mechanism and ditched drum magazines to increase reliability during combat."
+SWEP.Trivia_Desc = "Expensive automatic SMG used in WWII by the US and Allies before shifting towards cheaper alternatives. For a premium, it offers reasonable recoil control and great firepower - though the firerate was more of a detriment than an advantage."
 SWEP.Trivia_Manufacturer = "Auto-Ordnance"
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Blowback"
@@ -25,9 +25,9 @@ SWEP.ViewModel = "models/weapons/arccw/c_dod_thompson.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_thompson.mdl"
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 34
+SWEP.Damage = 33
 SWEP.DamageMin = 21 -- damage done at maximum range
-SWEP.Range = 75 -- in METRES
+SWEP.Range = 40 -- in METRES
 SWEP.Penetration = 3
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -43,9 +43,9 @@ SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 50
 SWEP.ReducedClipSize = 20
 
-SWEP.Recoil = 0.60
+SWEP.Recoil = 0.70
 SWEP.RecoilSide = 0.5
-SWEP.RecoilRise = 1
+SWEP.RecoilRise = 0.3
 
 SWEP.Delay = 60 / 750 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -63,7 +63,7 @@ SWEP.NPCWeight = 200
 
 SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 150
+SWEP.MoveDispersion = 120
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "thompson" -- the magazine pool this gun draws from
@@ -82,11 +82,10 @@ SWEP.ShellScale = 1.75
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
-SWEP.SpeedMult = 1
-SWEP.SightedSpeedMult = 0.65
-SWEP.SightTime = 0.33
+SWEP.SpeedMult = 0.98
+SWEP.SightedSpeedMult = 0.75
+SWEP.SightTime = 0.28
 SWEP.VisualRecoilMult = 1
-SWEP.RecoilRise = 1
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -94,13 +93,13 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 }
 
 SWEP.ProceduralRegularFire = false
-SWEP.ProceduralIronFire = false
+SWEP.ProceduralIronFire = true
 
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-4.53, -4.75, 1.8),
-    Ang = Angle(0.6, 0.01, 0),
+    Pos = Vector(-4.52, -4.75, 1.8),
+    Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -137,9 +136,17 @@ SWEP.AttachmentElements = {
     ["stock"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
         WMBodygroups = {{ind = 3, bg = 1}},
-        Mult_Recoil = 0.5,
-        Mult_MoveSpeed = 0.9,
+        Mult_Recoil = 0.75,
+        Mult_MoveSpeed = 0.95,
     },
+    ["altirons"] = {
+        Override_IronSightStruct = {
+            Pos = Vector(-4.526, -6.231, 2.055),
+            Ang = Angle(0, 0.05, 0),
+            Magnification = 1.5,
+        }
+    },
+<<<<<<< HEAD
     /*["extendedmag"] = {
         VMBodygroups = {{ind = 2, bg = 2}},
         WMBodygroups = {{ind = 2, bg = 2}},
@@ -167,6 +174,8 @@ SWEP.AttachmentElements = {
             }
         },
     },
+=======
+>>>>>>> 263cea50f2345de194b3822225a8ac203ebfb60d
 }
 
 SWEP.Attachments = {
@@ -184,6 +193,7 @@ SWEP.Attachments = {
         InstalledEles = {"noch", "mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(2.5, 0, 0),
+<<<<<<< HEAD
         SlideAmount = { -- how far this attachment can slide in both directions.
             -- overrides Offset.
             vmin = Vector(-9, -7.75, 0.05),
@@ -191,6 +201,13 @@ SWEP.Attachments = {
             wmin = Vector(-1.5, 0.725, -3.75),
             wmax = Vector(3, 0.725, -4.75),
         },
+=======
+        MergeSlots = {2},
+    },
+    {
+        Slot = "irons_alt",
+        InstalledEles = {"altirons"}
+>>>>>>> 263cea50f2345de194b3822225a8ac203ebfb60d
     },
     {
         PrintName = "Muzzle",
@@ -215,7 +232,7 @@ SWEP.Attachments = {
             wpos = Vector(12, 0.725, -3.75),
             wang = Angle(170, -180, 0),
         },
-        MergeSlots = {4},
+        MergeSlots = {5},
     },
     {
         Hidden = true,
@@ -248,7 +265,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = "stock",
         DefaultAttName = "No Stock",
-        Installed = "stock_heavy",
+        Installed = "stock_sturdy",
         InstalledEles = {"stock"},
         FreeSlot = true,
     },
@@ -290,21 +307,11 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.4,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
-    },
-    ["ready"] = {
-        Source = "draw",
-        Time = 1,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
+        Time = 0.8,
     },
     ["fire"] = {
         Source = {"shoot1", "shoot2", "shoot3"},
-        Time = 0.5,
+        Time = 1,
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
@@ -314,7 +321,7 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload_tactical",
-        Time = 2,
+        Time = 2.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
@@ -324,7 +331,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload",
-        Time = 2.5,
+        Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
