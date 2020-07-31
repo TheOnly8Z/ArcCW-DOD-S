@@ -299,7 +299,14 @@ SWEP.Attachments = {
 }
 
 SWEP.Animations = {
-    ["idle"] = false,
+    ["idle"] = {
+        Source = "idle",
+        Time = 1
+    },
+    ["idle_empty"] = {
+        Source = "empty_idle",
+        Time = 1
+    },
     ["draw"] = {
         Source = "draw",
         Time = 1,
