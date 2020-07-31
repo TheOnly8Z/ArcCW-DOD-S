@@ -127,6 +127,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 SWEP.ActivePos = Vector(0, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
+SWEP.CrouchPos = Vector(-6, 0, 2)
+SWEP.CrouchAng = Angle(0, 0, -35)
+
 SWEP.CustomizePos = Vector(8, -4, 0)
 
 SWEP.HolsterPos = Vector(1, -8, -4)
@@ -173,8 +176,8 @@ SWEP.Attachments = {
             wpos = Vector(4.129, 1.476, -4.216),
             wang = Angle(-2.829, -4.902, 180)
         },
-        CorrectiveAng = Angle(0, 90, 0),
-        CorrectivePos = Vector(-12, 8, 2)
+        CorrectiveAng = Angle(0, 0, 0),
+        CorrectivePos = Vector(0, 0, 0)
     },
     {
         PrintName = "Muzzle",

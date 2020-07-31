@@ -100,10 +100,11 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector (-6.82, -10, 3.3),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector (-6.85, -10, 3.3),
+    Ang = Angle(0, 0.05, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
+    CrosshairInSights = false
 }
 
 SWEP.HoldtypeHolstered = "passive"
@@ -162,7 +163,7 @@ SWEP.AttachmentElements = {
         WMBodygroups = {{ind = 2, bg = 2}},
     },
     ["fcg_auto"] = {
-        TrueNameChange = "M3 Carbine",
+        TrueNameChange = "M2 Carbine",
         NameChange = "M1945A1",
         --Trivia_Desc = "Select-fire variant that allows for fully automatic fire and mount for a scope.",
         --Trivia_Class = "Selective-fire Carbine"
@@ -263,10 +264,25 @@ SWEP.Attachments = {
         PrintName = "Perk",
         Slot = "perk"
     },
+    {
+        PrintName = "Charm", -- print name
+        Slot = "charm", -- what kind of attachments can fit here, can be string or table
+        FreeSlot = true,
+        Bone = "ValveBiped.m1_base", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(-2.25, -0.5, 5.05), -- offset that the attachment will be relative to the bone
+            vang = Angle(90, 0, 0),
+            wpos = Vector(7.15, 1.365, -4.85),
+            wang = Angle(170, -180, 0),
+        },
+    },
 }
 
 SWEP.Animations = {
-    ["idle"] = false,
+    ["idle"] = {
+        Source = "idle",
+        Time = 1,
+    },
     ["draw"] = {
         Source = "draw",
         Time = 0.4,
@@ -296,35 +312,27 @@ SWEP.Animations = {
         Time = 2.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 32,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIK = false,
     },
     ["reload_empty"] = {
         Source = "reload",
         Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 32,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIK = false,
     },
     ["reload_extend"] = {
         Source = "reload_wet_extend",
         Time = 2.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 32,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIK = false,
     },
     ["reload_empty_extend"] = {
         Source = "reload_extend",
         Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 32,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIK = false,
     },
 }

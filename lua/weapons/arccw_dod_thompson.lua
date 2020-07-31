@@ -102,6 +102,7 @@ SWEP.IronSightStruct = {
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
+    CrosshairInSights = false
 }
 
 SWEP.HoldtypeHolstered = "passive"

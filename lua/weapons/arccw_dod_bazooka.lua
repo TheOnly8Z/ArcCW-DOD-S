@@ -95,9 +95,10 @@ SWEP.CaseBones = {}
 SWEP.KeepBaseIrons = false
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.64, -9, 0.74),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-3.74, -9, 0.1),
+    Ang = Angle(3, -0.45, 0),
     Magnification = 1.5,
+    CrosshairInSights = false
 }
 
 SWEP.ProceduralRegularFire = false
