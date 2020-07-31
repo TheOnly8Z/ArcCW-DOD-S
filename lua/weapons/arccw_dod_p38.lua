@@ -100,10 +100,11 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-5.7, -2.5, 3.8),
+    Pos = Vector(-5.7, -2.5, 4.0),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
+    CrosshairInSights = false
 }
 
 SWEP.HoldtypeHolstered = "normal"
@@ -114,6 +115,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
+
+SWEP.CrouchPos = Vector(-6, 0, 2)
+SWEP.CrouchAng = Angle(0, 0, -35)
 
 SWEP.HolsterPos = Vector(-2, -7.145, -11.561)
 SWEP.HolsterAng = Angle(36.533, 0, 0)
@@ -151,19 +155,7 @@ SWEP.Attachments = {
     { --1
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {"optic_lp"}, -- what kind of attachments can fit here, can be string or table
-        Bone = "ValveBiped.slide",
-        Offset = {
-            vpos = Vector(0.085, 0, 0), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 90, 0),
-            wpos = Vector(3, 1.25, -3.5),
-            wang = Angle(170, 180, 0)
-        },
-        MergeSlots = {2},
-    },
-    {
-        Hidden = true,
-        Slot = {"optic"}, -- what kind of attachments can fit here, can be string or table
+        Slot = "optic_lp", -- what kind of attachments can fit here, can be string or table
         Bone = "ValveBiped.slide",
         Offset = {
             vpos = Vector(0.085, 0, 0), -- offset that the attachment will be relative to the bone
@@ -171,7 +163,8 @@ SWEP.Attachments = {
             wpos = Vector(3, 1.25, -3.5),
             wang = Angle(170, 180, 0)
         },
-        CorrectivePos = Vector(0, 0, 0),
+        MergeSlots = false,
+        CorrectivePos = Vector(0, 0, -0.03),
         CorrectiveAng = Angle(0, 180, 0)
     },
     { --2

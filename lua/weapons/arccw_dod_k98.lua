@@ -245,11 +245,11 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Ammo Type",
-        Slot = {"ammo_bullet", "dod_clip"}
+        Slot = "ammo_bullet"
     },
     {
         PrintName = "Perk",
-        Slot = "perk"
+        Slot = {"perk", "dod_clip"}
     },
     {
         PrintName = "Charm",
@@ -324,13 +324,23 @@ SWEP.Attachments = {
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
     local newAnim = anim
 
-    -- An empty casing is in the weapon, play an animation that ejects that
-    if wep:GetNWBool("cycle", false) and anim == "sgreload_start_empty" then
-        newAnim = "sgreload_start_empty_shell"
-        wep:SetTimer(0.1, function() wep:SetNWBool("cycle", false) end)
-    elseif wep:GetNWBool("cycle", false) and anim == "reload" then
-        newAnim = "reload_shell"
-        wep:SetTimer(0.1, function() wep:SetNWBool("cycle", false) end)
+    if wep:GetBuff_Override("Override_InsertAmount") == 5 then
+
+        if anim == "sgreload_start" or anim == "sgreload_finish" or anim == "sgreload_start_empty" then
+            return "null"
+        end
+
+    else
+
+        -- An empty casing is in the weapon, play an animation that ejects that
+        if wep:GetNWBool("cycle", false) and anim == "sgreload_start_empty" then
+            newAnim = "sgreload_start_empty_shell"
+            wep:SetTimer(0.1, function() wep:SetNWBool("cycle", false) end)
+        elseif wep:GetNWBool("cycle", false) and anim == "reload" then
+            newAnim = "reload_shell"
+            wep:SetTimer(0.1, function() wep:SetNWBool("cycle", false) end)
+        end
+
     end
 
     if (wep.Attachments[12].Installed or wep.Attachments[11].Installed) and wep:GetBuff_Override("Override_ShotgunReload") != false then
@@ -354,6 +364,14 @@ SWEP.Hook_SelectInsertAnimation = function(wep, data)
             empty = data.empty
         }
     end
+
+    if wep:GetBuff_Override("Override_InsertAmount") == 5 then
+        return {
+            count = data.count,
+            anim = "reload",
+            empty = data.empty
+        }
+    end
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
@@ -367,6 +385,10 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         Time = 1,
+    },
+    ["null"] = {
+        Source = "idle",
+        Time = 0.01
     },
     ["idle_empty"] = {
         Source = "idle_empty",

@@ -14,5 +14,4 @@ att.ExcludeFlags = {"dod_scope"}
 att.SortOrder = 1
 
 att.ActivateElements = {"clip"}
-att.Override_ShotgunReload = false
-att.Override_RevolverReload = true
+att.Override_InsertAmount = 5

@@ -227,15 +227,9 @@ SWEP.Attachments = {
     },
 }
 
-SWEP.Hook_TranslateAnimation = function(wep, anim)
-    if wep:GetNWBool("bipod", false) and wep.Animations[anim .. "_bipod"] then
-        return anim .. "_bipod"
-    end
-end
-
 SWEP.Animations = {
     ["idle"] = {
-        Source = {"upidle"},
+        Source = "upidle",
     },
     ["draw"] = {
         Source = "draw",
@@ -249,23 +243,8 @@ SWEP.Animations = {
         Time = 1,
         ShellEjectAt = 0,
     },
-    ["fire_bipod"] = {
-        Source = "downshoot",
-        Time = 1,
-        ShellEjectAt = 0,
-    },
     ["fire_iron"] = {
-        Source = {"upshoot", "upshoot_2", "upshoot_3"},
-        Time = 1,
-        ShellEjectAt = 0,
-    },
-    ["fire_bipod_iron"] = {
-        Source = "upshoot",
-        Time = 1,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron"] = {
-        Source = "upshoot",
+        Source = "upidle",
         Time = 1,
         ShellEjectAt = 0,
     },
@@ -288,62 +267,5 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
-    },
-    ["reload_bipod"] = {
-        Source = "reload_wet",
-        Time = 4.5,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-    },
-    ["reload_empty_bipod"] = {
-        Source = "reload",
-        Time = 4.5,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-    },
-    ["enter_bipod"] = {
-        Source = "uptodown",
-        Time = 1,
-    },
-    ["exit_bipod"] = {
-        Source = "downtoup",
-        Time = 1,
-    },
-    ["exit_sight_bipod"] = {
-        Source = "uptodown",
-        Time = 1,
-    },
-    ["enter_sight_bipod"] = {
-        Source = "downtoup",
-        Time = 1,
-    },
-    ["idle_bipod"] = {
-        Source = "downidle",
-        Time = 1,
-    },
-    ["idle_sight_bipod"] = {
-        Source = "upidle",
-        Time = 1,
-    },
-    -- Unused, but required to trick ArcCW into putting the animation into TranslateAnimation (so we can do the bipod one)
-    ["enter_sight"] = {
-        Source = "upidle",
-        Time = 0,
-    },
-    ["exit_sight"] = {
-        Source = "upidle",
-        Time = 0,
-    },
-    ["idle_sight"] = {
-        Source = "upidle",
-        Time = 0,
     },
 }
