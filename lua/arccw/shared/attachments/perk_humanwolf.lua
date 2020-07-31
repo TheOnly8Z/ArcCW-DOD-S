@@ -10,16 +10,13 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = "lone_wolf"
 
-att.Mult_Recoil = 0.55
-att.Mult_RecoilSide = 0.65
-
-att.Mult_RPM = 1.25
-
+att.Mult_Recoil = 0.5
+att.Mult_RecoilSide = 0.6
 att.Mult_HipDispersion = 0.4
 
-att.Mult_ShootVol = 3
-
-att.Mult_SpeedMult = 0.4
+att.Mult_ShootVol = 1.5
+att.Mult_SpeedMult = 0.6
+att.Mult_SightTime = 2
 
 att.Hook_BulletHit = function(wep, data)
     if CLIENT then return end
