@@ -250,7 +250,17 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_bipod"] = {
-        Source = {"downshoot", "downshoot_2", "downshoot_3"},
+        Source = "downshoot",
+        Time = 1,
+        ShellEjectAt = 0,
+    },
+    ["fire_iron"] = {
+        Source = {"upshoot", "upshoot_2", "upshoot_3"},
+        Time = 1,
+        ShellEjectAt = 0,
+    },
+    ["fire_bipod_iron"] = {
+        Source = "upshoot",
         Time = 1,
         ShellEjectAt = 0,
     },
