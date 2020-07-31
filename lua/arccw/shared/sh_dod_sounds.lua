@@ -242,7 +242,7 @@ sound.Add({
     name = "ArcCW_DOD_BAR.ClipIn1",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/dod/bar_clipin.wav"
+    sound = "weapons/arccw/dod/bar_clipin1.wav"
 })
 
 sound.Add({
@@ -286,7 +286,7 @@ sound.Add({
     name = "ArcCW_DOD_STG44.ClipIn1",
     channel = CHAN_ITEM,
     level = 70,
-    sound = "weapons/arccw/dod/mp44_clipin.wav"
+    sound = "weapons/arccw/dod/mp44_clipin1.wav"
 })
 
 sound.Add({
