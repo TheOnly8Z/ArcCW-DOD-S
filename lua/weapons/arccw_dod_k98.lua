@@ -366,11 +366,19 @@ SWEP.Hook_SelectInsertAnimation = function(wep, data)
     end
 
     if wep:GetBuff_Override("Override_InsertAmount") == 5 then
-        return {
-            count = data.count,
-            anim = "reload",
-            empty = data.empty
-        }
+        if wep:Clip1() == 0 then
+            return {
+                count = data.count,
+                anim = "reload_empty",
+                empty = data.empty
+            }
+        else
+            return {
+                count = data.count,
+                anim = "reload",
+                empty = data.empty
+            }
+        end
     end
 end
 

@@ -287,9 +287,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIK = false,
     },
     ["reload_empty"] = {
         Source = "up_reload",
@@ -297,9 +295,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIK = false,
     },
     ["reload_extend"] = {
         Source = "up_reload_tactical_thick",
@@ -307,9 +303,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIK = false,
     },
     ["reload_empty_extend"] = {
         Source = "up_reload_thick",
@@ -317,8 +311,6 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 37,
         Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIK = false,
     },
 }
