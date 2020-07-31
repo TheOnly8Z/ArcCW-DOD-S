@@ -3,8 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - DOD:S" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "MkB-44H"
-SWEP.TrueName = "STG-44"
+SWEP.PrintName = "MKb-44(H)"
+SWEP.TrueName = "StG-44"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "The first modern assault rifle. Created by Nazi Germany in 1942 with the intent to arm tank crewmen with better weapons than an SMG or a rifle."
 SWEP.Trivia_Manufacturer = "Schmeisser Waffe GmbH"
@@ -26,7 +26,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_dod_stg44.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_stg44.mdl"
-SWEP.ViewModelFOV = 65
+SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 35
 SWEP.DamageMin = 25 -- damage done at maximum range

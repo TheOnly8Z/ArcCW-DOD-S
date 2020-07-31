@@ -3,10 +3,10 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - DOD:S" -- edit this if you like
 SWEP.AdminOnly = false
 SWEP.PrintName = "Kreissäge-42"
-SWEP.TrueName = "Maschinengewehr 42"
+SWEP.TrueName = "MG42"
 SWEP.Trivia_Class = "Machine Gun"
 SWEP.Trivia_Desc = "Heavy machine gun with a ludicurous rate of fire, nicknamed \"Hitler's Buzzsaw\" by Allied forces due to its terrifying sound. Its design is revolutionary and can be seen in many modern machine guns today."
-SWEP.Trivia_Manufacturer = "Mauser & Simson"
+SWEP.Trivia_Manufacturer = "Ratter"
 SWEP.Trivia_Calibre = "7.92x57mm Mauser"
 SWEP.Trivia_Mechanism = "Gas-Actuated Open Bolt"
 SWEP.Trivia_Country = "Nazi Germany"
@@ -16,12 +16,13 @@ SWEP.Slot = 3
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
+    SWEP.Trivia_Manufacturer = "Mauser"
 end
 
 SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_dod_mg42_new.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_mg42.mdl"
-SWEP.ViewModelFOV = 80
+SWEP.ViewModelFOV = 60
 SWEP.DefaultBodygroups = "0000000"
 
 SWEP.Damage = 54
@@ -109,13 +110,13 @@ SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, -4, 0)
+SWEP.ActivePos = Vector(0, -5, -1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(10, -6, -4)
 SWEP.CustomizeAng = Angle(15, 40, 0)
 
-SWEP.HolsterPos = Vector(0.532, -6, 0)
+SWEP.HolsterPos = Vector(5, -6, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
