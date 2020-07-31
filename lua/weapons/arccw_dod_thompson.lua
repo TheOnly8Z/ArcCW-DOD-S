@@ -23,7 +23,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_dod_thompson.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_thompson.mdl"
-SWEP.ViewModelFOV = 65
+SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 34
 SWEP.DamageMin = 21 -- damage done at maximum range
@@ -144,6 +144,29 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 2, bg = 2}},
         WMBodygroups = {{ind = 2, bg = 2}},
     },*/
+    ["mount"] = {
+        VMElements = {
+            {
+                Model = "models/weapons/arccw/atts/mount_rail.mdl",
+                Bone = "v_thompson.root2",
+                Scale = Vector(2, 1, 1.5),
+                Offset = {
+                    pos = Vector(-6.5, -7.5, 0.05),
+                    ang = Angle(0, 0, -90),
+                }
+            }
+        },
+        WMElements = {
+            {
+                Model = "models/weapons/arccw/atts/mount_rail.mdl",
+                Scale = Vector(2, 1, 1.5),
+                Offset = {
+                    pos = Vector(1.25, 0.725, -4.2),
+                    ang = Angle(170, -180, 0)
+                }
+            }
+        },
+    },
 }
 
 SWEP.Attachments = {
@@ -153,14 +176,21 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "v_thompson.root2", -- v_thompson, v_thompson.root2, v_thompson.root3, v_thompson.root4, v_thompson.root5
         Offset = {
-            vpos = Vector(-8.5, -7.5, 0.05), -- offset that the attachment will be relative to the bone
+            vpos = Vector(-6.5, -7.75, 0.05), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
-            wpos = Vector(-1.5, 0.725, -3.75),
+            wpos = Vector(1.25, 0.725, -4.2),
             wang = Angle(170, -180, 0),
         },
-        InstalledEles = {"noch"},
+        InstalledEles = {"noch", "mount"},
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(2.5, 0, 0)
+        CorrectiveAng = Angle(2.5, 0, 0),
+        SlideAmount = { -- how far this attachment can slide in both directions.
+            -- overrides Offset.
+            vmin = Vector(-9, -7.75, 0.05),
+            vmax = Vector(-4.5, -7.75, 0.05),
+            wmin = Vector(-1.5, 0.725, -3.75),
+            wmax = Vector(3, 0.725, -4.75),
+        },
     },
     {
         PrintName = "Muzzle",
