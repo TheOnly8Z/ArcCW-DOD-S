@@ -146,11 +146,6 @@ SWEP.AttachmentElements = {
             Magnification = 1.5,
         }
     },
-<<<<<<< HEAD
-    /*["extendedmag"] = {
-        VMBodygroups = {{ind = 2, bg = 2}},
-        WMBodygroups = {{ind = 2, bg = 2}},
-    },*/
     ["mount"] = {
         VMElements = {
             {
@@ -174,8 +169,6 @@ SWEP.AttachmentElements = {
             }
         },
     },
-=======
->>>>>>> 263cea50f2345de194b3822225a8ac203ebfb60d
 }
 
 SWEP.Attachments = {
@@ -193,7 +186,6 @@ SWEP.Attachments = {
         InstalledEles = {"noch", "mount"},
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(2.5, 0, 0),
-<<<<<<< HEAD
         SlideAmount = { -- how far this attachment can slide in both directions.
             -- overrides Offset.
             vmin = Vector(-9, -7.75, 0.05),
@@ -201,13 +193,11 @@ SWEP.Attachments = {
             wmin = Vector(-1.5, 0.725, -3.75),
             wmax = Vector(3, 0.725, -4.75),
         },
-=======
         MergeSlots = {2},
     },
     {
         Slot = "irons_alt",
         InstalledEles = {"altirons"}
->>>>>>> 263cea50f2345de194b3822225a8ac203ebfb60d
     },
     {
         PrintName = "Muzzle",
