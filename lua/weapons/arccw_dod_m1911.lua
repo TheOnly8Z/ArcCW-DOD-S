@@ -31,7 +31,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_dod_m1911.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_m1911.mdl"
-SWEP.ViewModelFOV = 56
+SWEP.ViewModelFOV = 54
 
 SWEP.Damage = 32
 SWEP.DamageMin = 17 -- damage done at maximum range
@@ -124,7 +124,7 @@ SWEP.HoldtypeSights = "revolver"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.ActivePos = Vector(0, 0, 1)
+SWEP.ActivePos = Vector(-1, 0, 2.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-6, 0, 2)

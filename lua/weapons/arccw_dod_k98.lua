@@ -116,7 +116,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 
-SWEP.ActivePos = Vector(-2, -2, 0)
+SWEP.ActivePos = Vector(-2, -4, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(5, -3, 0)

@@ -117,8 +117,11 @@ SWEP.HoldtypeSights = "revolver"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActivePos = Vector(-1, -2.5, 2)
 SWEP.ActiveAng = Angle(0, 0, 0)
+
+SWEP.CustomizePos = Vector(10, -7.5, -2)
+SWEP.CustomizeAng = Angle(15, 40, 0)
 
 SWEP.HolsterPos = Vector(-2, -7.145, -11.561)
 SWEP.HolsterAng = Angle(36.533, 0, 0)

@@ -20,7 +20,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_dod_us_knife.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_us_knife.mdl"
-SWEP.ViewModelFOV = 60
+SWEP.ViewModelFOV = 54
 
 SWEP.PrimaryBash = true
 SWEP.CanBash = true
@@ -79,6 +79,9 @@ SWEP.Animations = {
 }
 
 SWEP.IronSightStruct = false
+
+SWEP.ActivePos = Vector(0, 0, 0.5)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.BashPreparePos = Vector(0, 0, 0)
 SWEP.BashPrepareAng = Angle(0, 5, 0)

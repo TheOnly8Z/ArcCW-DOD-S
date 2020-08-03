@@ -24,7 +24,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_dod_m1919.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_m1919.mdl"
-SWEP.ViewModelFOV = 55
+SWEP.ViewModelFOV = 54
 
 SWEP.Damage = 65
 SWEP.DamageMin = 30 -- damage done at maximum range
