@@ -20,7 +20,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_dod_us_knife.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_us_knife.mdl"
-SWEP.ViewModelFOV = 60
+SWEP.ViewModelFOV = 55
 
 SWEP.PrimaryBash = true
 SWEP.CanBash = true

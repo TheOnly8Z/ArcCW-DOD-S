@@ -76,7 +76,6 @@ SWEP.DistantShootSound = nil --"weapons/arccw/ak47/ak47-1-distant.wav"
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"
 SWEP.ShellScale = 1.5
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on

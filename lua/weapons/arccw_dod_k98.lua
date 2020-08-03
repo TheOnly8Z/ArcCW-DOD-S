@@ -25,7 +25,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_dod_k98.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_k98.mdl"
-SWEP.ViewModelFOV = 56
+SWEP.ViewModelFOV = 45
 
 SWEP.Damage = 75
 SWEP.DamageMin = 95 -- damage done at maximum range
@@ -116,7 +116,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 
-SWEP.ActivePos = Vector(-2, -2, 0)
+SWEP.ActivePos = Vector(-2, 0, 2)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(5, -3, 0)

@@ -26,7 +26,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_dod_stg44.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_stg44.mdl"
-SWEP.ViewModelFOV = 60
+SWEP.ViewModelFOV = 55
 
 SWEP.Damage = 35
 SWEP.DamageMin = 25 -- damage done at maximum range
@@ -84,7 +84,6 @@ SWEP.DistantShootSound = nil -- "weapons/arccw/ak47/ak47-1-distant.wav"
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"
 SWEP.ShellScale = 1.5
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -118,7 +117,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActivePos = Vector(0.5, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)

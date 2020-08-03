@@ -23,7 +23,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/c_dod_thompson.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_thompson.mdl"
-SWEP.ViewModelFOV = 60
+SWEP.ViewModelFOV = 50
 
 SWEP.Damage = 33
 SWEP.DamageMin = 21 -- damage done at maximum range
@@ -111,7 +111,7 @@ SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActivePos = Vector(-1, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
