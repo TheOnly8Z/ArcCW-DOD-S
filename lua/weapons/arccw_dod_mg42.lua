@@ -39,12 +39,12 @@ SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 5
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 
-SWEP.Primary.ClipSize = 200 -- DefaultClip is automatically set.
+SWEP.Primary.ClipSize = 150 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 300
 SWEP.ReducedClipSize = 100
 
-SWEP.Recoil = 0.65
-SWEP.RecoilSide = 0.5
+SWEP.Recoil = 1.25
+SWEP.RecoilSide = 1
 SWEP.RecoilRise = 1
 SWEP.Delay = 60 / 1200 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -135,7 +135,7 @@ SWEP.AttachmentElements = {
 
 SWEP.Bipod_Integral = true
 SWEP.BipodRecoil = 0.1
-SWEP.BipodDispersion = 0.25
+SWEP.BipodDispersion = 0.2
 
 SWEP.ShellRotateAngle = Angle(0, 0, 0)
 
@@ -154,6 +154,7 @@ SWEP.Attachments = {
             wang = Angle(-10, 0, 180)
         },
         CorrectiveAng = Angle(180, 180, 180),
+        KeepBaseIrons = true
     },
     --[[]
     {
