@@ -111,8 +111,11 @@ SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActivePos = Vector(0, 0, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
+
+SWEP.CustomizePos = Vector(10, -6, -4)
+SWEP.CustomizeAng = Angle(15, 40, 0)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -213,6 +216,22 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
+        Slot = {"foregrip"},
+        Bone = "v_thompson.root2",
+        Offset = {
+            vpos = Vector(7, -5, 0.05), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, -90),
+            wpos = Vector(13.5, 0.725, -4),
+            wang = Angle(170, -180, 0),
+        },
+        SlideAmount = {
+            vmin = Vector(5.25, -5, 0.05),
+            vmax = Vector(10, -5, 0.05),
+        },
+        MergeSlots = {5},
+    },
+    {
+        Hidden = true,
         Slot = {"ubgl"},
         VMScale = Vector(1.2, 1, 1),
         Bone = "v_thompson.root2",
@@ -220,18 +239,6 @@ SWEP.Attachments = {
             vpos = Vector(4, -5, 0.05), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
             wpos = Vector(12, 0.725, -3.75),
-            wang = Angle(170, -180, 0),
-        },
-        MergeSlots = {5},
-    },
-    {
-        Hidden = true,
-        Slot = {"foregrip"},
-        Bone = "v_thompson.root2",
-        Offset = {
-            vpos = Vector(7, -5, 0.05), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, -90),
-            wpos = Vector(13.5, 0.725, -4),
             wang = Angle(170, -180, 0),
         },
     },
