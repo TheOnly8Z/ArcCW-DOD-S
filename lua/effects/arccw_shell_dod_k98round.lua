@@ -50,13 +50,14 @@ function EFFECT:Init(data)
     ang:RotateAroundAxis(ang:Forward(), (self.ShellRotateAngle or Angle(0, 0, 0))[3])
 
     local dir = ang:Up()
+    local st = GetConVar("arccw_shelltime"):GetFloat()
 
-        self.Model = self.ShellModel or self.Model
-        self.Scale = self.ShellScale or 1
-        self.PhysScale = self.ShellPhysScale or 1
-        self.Pitch = self.ShellPitch or 100
-        self.Sounds = self.ShellSounds or ArcCW.ShellSoundsTable
-        self.ShellTime = self.ShellTime or 5
+    self.Model = self.ShellModel or self.Model
+    self.Scale = self.ShellScale or 1
+    self.PhysScale = self.ShellPhysScale or 1
+    self.Pitch = self.ShellPitch or 100
+    self.Sounds = self.ShellSounds or ArcCW.ShellSoundsTable
+    self.ShellTime = st <= 0 and ent.ShellTime or st
 
     self:SetPos(origin)
     self:SetModel(self.Model)

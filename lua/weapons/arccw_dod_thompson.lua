@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - DOD:S" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1942 Annihilator"
+SWEP.PrintName = "Annihilator .45"
 SWEP.TrueName = "M1A1 Thompson"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "Expensive automatic SMG used in WWII by the US and Allies before shifting towards cheaper alternatives. For a premium, it offers reasonable recoil control and great firepower - though the firerate was more of a detriment than an advantage."
@@ -38,7 +38,7 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
-SWEP.ChamberSize = 1 -- how many rounds can be chambered.
+SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 50
 SWEP.ReducedClipSize = 20
@@ -62,7 +62,7 @@ SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 200
 
 SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 650 -- inaccuracy added by hip firing.
+SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 120
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
@@ -72,7 +72,7 @@ SWEP.ShootVol = 115 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_DOD_Thompson.Shoot"
-SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
+SWEP.ShootSoundSilenced = "weapons/arccw/usp/usp_01.wav"
 SWEP.DistantShootSound = nil --"weapons/arccw/ak47/ak47-1-distant.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_smg"

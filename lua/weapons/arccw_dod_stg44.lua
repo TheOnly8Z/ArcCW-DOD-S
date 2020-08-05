@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "MKb-44(H)"
 SWEP.TrueName = "StG-44"
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "The first modern assault rifle. Created by Nazi Germany in 1942 with the intent to arm tank crewmen with better weapons than an SMG or a rifle."
+SWEP.Trivia_Desc = "The first modern assault rifle, created with the intent to arm tank crewmen with better weapons than an SMG or a rifle. Hitler eventually dubbed the weapon the 'Sturmgewehr' as means for propaganda."
 SWEP.Trivia_Manufacturer = "Schmeisser Waffe GmbH"
 SWEP.Trivia_Calibre = "7.92x33mm Kurz"
 SWEP.Trivia_Mechanism = "Gas-Operated"
@@ -18,8 +18,6 @@ SWEP.Slot = 2
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
     SWEP.Trivia_Manufacturer = "C.G. Haenel"
-    SWEP.Trivia_Desc = "The first modern assault rifle. Created by Nazi Germany in 1942 with the intent to arm tank crewmen with better weapons than an SMG or a rifle. Hitler eventually dubbed the weapon the 'Sturmgewehr' as means for propaganda."
-
 end
 
 SWEP.UseHands = true
@@ -250,17 +248,17 @@ SWEP.Animations = {
     ["idle"] = false,
     ["draw"] = {
         Source = "draw_tactical",
-        Time = 0.4,
+        Time = 0.7,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0.25,
+        LHIKOut = 0.2,
     },
     ["ready"] = {
         Source = "draw",
         Time = 1,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0.25,
+        LHIKOut = 0.2,
     },
     ["fire"] = {
         Source = {"shoot1", "shoot2", "shoot3"},
@@ -279,8 +277,8 @@ SWEP.Animations = {
         Framerate = 37,
         Checkpoints = {28, 38, 69},
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
     },
     ["reload_empty"] = {
         Source = "reload",
@@ -289,7 +287,7 @@ SWEP.Animations = {
         Framerate = 37,
         Checkpoints = {28, 38, 69},
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
     },
 }

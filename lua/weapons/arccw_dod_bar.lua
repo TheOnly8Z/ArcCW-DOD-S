@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - DOD:S" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M18A2 Patton"
+SWEP.PrintName = "Patton .30 Cal"
 SWEP.TrueName = "M1918A2 BAR"
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = "Select-fire rifle developed based on the concept of 'walking fire', which involved firing the weapon while charging the enemy trench. In practice, the weapon played a role similar to light machine guns during WWII.\n\nRate-reducing mechanism allows the toggling of fast and slow automatic fire, the slow mode offering more recoil stability and control."

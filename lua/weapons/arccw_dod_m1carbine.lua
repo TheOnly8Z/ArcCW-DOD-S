@@ -3,13 +3,13 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - DOD:S" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1942C"
+SWEP.PrintName = "Cantrip Carbine"
 SWEP.TrueName = "M1 Carbine"
-SWEP.Trivia_Class = "Semi-Automatic Carbine"
+SWEP.Trivia_Class = "Carbine"
 SWEP.Trivia_Desc = "Lightweight semi-automatic carbine used by the United States during World War 2. Intended as a weapon issued to support troops, it is more powerful than most submachine guns but weaker than rifles of that era."
-SWEP.Trivia_Manufacturer = "General Motors"
+SWEP.Trivia_Manufacturer = "Midwest Munitions"
 SWEP.Trivia_Calibre = ".30 Carbine"
-SWEP.Trivia_Mechanism = "Gas-operated Rotating Bolt"
+SWEP.Trivia_Mechanism = "Gas-operated"
 SWEP.Trivia_Country = "United States of America"
 SWEP.Trivia_Year = 1942
 
@@ -17,7 +17,9 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
+    SWEP.Trivia_Manufacturer = "General Motors"
 end
+
 
 SWEP.UseHands = true
 
@@ -164,9 +166,7 @@ SWEP.AttachmentElements = {
     },
     ["fcg_auto"] = {
         TrueNameChange = "M2 Carbine",
-        NameChange = "M1945A1",
-        --Trivia_Desc = "Select-fire variant that allows for fully automatic fire and mount for a scope.",
-        --Trivia_Class = "Selective-fire Carbine"
+        NameChange = "Cantrip E2",
     }
 }
 

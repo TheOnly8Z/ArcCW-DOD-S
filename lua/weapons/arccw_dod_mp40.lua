@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "Adler M40"
 SWEP.TrueName = "MP40"
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "German standard issue submachine gun. While German combat doctrine did not rely on infantry firepower, more units were equipped with SMGs following the battle at Stalingrad."
+SWEP.Trivia_Desc = "German standard issue submachine gun. Cheap and comfortable to shoot, this weapon would outlast its makers and be found in the hands of modern insurgents. This particular model seems to be a closed-bolt reproduction."
 SWEP.Trivia_Manufacturer = "Erma Werke"
 SWEP.Trivia_Calibre = "9x19mm"
 SWEP.Trivia_Mechanism = "Gas-operated"
@@ -61,7 +61,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_smg1"
 SWEP.NPCWeight = 70
 
-SWEP.AccuracyMOA = 25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 18 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 250 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 100
 

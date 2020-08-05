@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - DOD:S" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Simmons H1919"
+SWEP.PrintName = "Simmons .30 Cal"
 SWEP.TrueName = "Browning M1919A6"
 SWEP.Trivia_Class = "Machine Gun"
 SWEP.Trivia_Desc = "Air-cooled .30 caliber machine gun used in infantry support and vehicular roles. It is not as effective in suppression as its German counterpart, and is more commonly seen mounted after the war."
