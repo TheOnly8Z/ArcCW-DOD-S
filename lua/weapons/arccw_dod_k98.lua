@@ -245,11 +245,11 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Ammo Type",
-        Slot = "ammo_bullet"
+        Slot = {"ammo_bullet", "dod_clip"}
     },
     {
         PrintName = "Perk",
-        Slot = {"perk", "dod_clip"}
+        Slot = "perk"
     },
     {
         PrintName = "Charm",
