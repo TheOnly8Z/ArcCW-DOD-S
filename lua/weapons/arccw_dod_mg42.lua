@@ -58,7 +58,7 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = {"weapon_ar2"}
 SWEP.NPCWeight = 20
 
-SWEP.AccuracyMOA = 20 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 12 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 750 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 400
 
@@ -177,6 +177,11 @@ SWEP.Attachments = {
         Installed = "dod_m1919_bipod",
     },
     ]]
+    {
+        PrintName = "Barrel",
+        DefaultAttName = "Standard Barrel",
+        Slot = "barrel",
+    },
     {
         PrintName = "Tactical",
         Slot = "tac",

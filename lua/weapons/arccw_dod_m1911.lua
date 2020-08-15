@@ -127,16 +127,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 SWEP.ActivePos = Vector(-1, 0, 2.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(-6, 0, 2)
-SWEP.CrouchAng = Angle(0, 0, -35)
-
 SWEP.CustomizePos = Vector(8, -4, 0)
 
 SWEP.HolsterPos = Vector(1, -8, -4)
 SWEP.HolsterAng = Angle(36.533, 0, 0)
-
-SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
-SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.AttachmentElements = {
     ["stock"] = {
@@ -165,6 +159,7 @@ SWEP.AttachmentElements = {
 SWEP.ExtraSightDist = 2
 
 SWEP.Attachments = {
+    --[[]
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
@@ -179,6 +174,7 @@ SWEP.Attachments = {
         CorrectiveAng = Angle(0, 0, 0),
         CorrectivePos = Vector(0, 0, 0)
     },
+    ]]
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
@@ -244,14 +240,23 @@ SWEP.Animations = {
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.3,
     },
     ["draw"] = {
         Source = "draw",
         Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.3,
     },
     ["ready"] = {
         Source = "ready",
         Time = 1.2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.3,
     },
     ["fire"] = {
         Source = {"shoot1", "shoot2", "shoot3"},
