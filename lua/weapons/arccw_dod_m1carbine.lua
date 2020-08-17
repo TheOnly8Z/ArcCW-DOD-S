@@ -210,8 +210,8 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip"},
-        VMScale = Vector(1, 1, 1),
+        Slot = "foregrip",
+        VMScale = Vector(1.1, 1.1, 1.1),
         Bone = "ValveBiped.m1_base",
         Offset = {
             vpos = Vector(-1.6, 0.25, 14),
@@ -219,7 +219,7 @@ SWEP.Attachments = {
             wpos = Vector(13, 1.365, -3.75),
             wang = Angle(170, 180, 0),
         },
-        MergeSlots = {4},
+        MergeSlots = {4, 5},
     },
     {
         Hidden = true,
@@ -227,6 +227,17 @@ SWEP.Attachments = {
         Bone = "ValveBiped.m1_base",
         Offset = {
             vpos = Vector(-1.6, 0.25, 16),
+            vang = Angle(90, 0, 0),
+            wpos = Vector(16, 1.365, -4.7),
+            wang = Angle(170, 180, 0),
+        },
+    },
+    {
+        Hidden = true,
+        Slot = "ubgl",
+        Bone = "ValveBiped.m1_base",
+        Offset = {
+            vpos = Vector(-1.6, 0.25, 10),
             vang = Angle(90, 0, 0),
             wpos = Vector(16, 1.365, -4.7),
             wang = Angle(170, 180, 0),
