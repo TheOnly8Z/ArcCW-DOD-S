@@ -162,7 +162,7 @@ SWEP.ExtraSightDist = 2
 -- The slide bone is *beyond fucked*, which means this is to manually overwrite the autosolve result to get normal sights
 SWEP.ReferencePosCache = {
     [46] = {
-        Pos = Vector(3.85, 3.95, -12),
+        Pos = Vector(3.85, 3.92, -12),
         Ang = Angle(-90, -90, 0),
     }
 }
