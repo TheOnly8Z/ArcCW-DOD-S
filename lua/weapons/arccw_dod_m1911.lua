@@ -158,23 +158,28 @@ SWEP.AttachmentElements = {
 
 SWEP.ExtraSightDist = 2
 
+-- UGLIEST HACK I'VE EVER DONE
+-- The slide bone is *beyond fucked*, which means this is to manually overwrite the autosolve result to get normal sights
+SWEP.ReferencePosCache = {
+    [46] = {
+        Pos = Vector(3.85, 3.95, -12),
+        Ang = Angle(-90, -90, 0),
+    }
+}
+
 SWEP.Attachments = {
-    --[[]
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
         Slot = "optic_lp", -- what kind of attachments can fit here, can be string or table
-        Bone = "ValveBiped.slide", -- relevant bone any attachments will be mostly referring to
+        Bone = "ValveBiped.attachpos2", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0.05, -0.201, 0.2), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, -90, 0),
+            vpos = Vector(0, -0.1, 0), -- offset that the attachment will be relative to the bone
+            vang = Angle(90, 0, -90),
             wpos = Vector(4.129, 1.476, -4.216),
             wang = Angle(-2.829, -4.902, 180)
         },
-        CorrectiveAng = Angle(0, 0, 0),
-        CorrectivePos = Vector(0, 0, 0)
     },
-    ]]
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
@@ -236,7 +241,6 @@ SWEP.Attachments = {
 }
 
 SWEP.Animations = {
-    ["idle"] = false,
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 0.75,
