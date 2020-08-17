@@ -28,8 +28,8 @@ SWEP.WorldModel = "models/weapons/arccw/w_dod_m1carbine.mdl"
 SWEP.ViewModelFOV = 54
 
 SWEP.Damage = 32
-SWEP.DamageMin = 18 -- damage done at maximum range
-SWEP.Range = 75 -- in METRES
+SWEP.DamageMin = 22 -- damage done at maximum range
+SWEP.Range = 120 -- in METRES
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -63,9 +63,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 170
 
-SWEP.AccuracyMOA = 12 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 400 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 100
+SWEP.AccuracyMOA = 7 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 120
 
 SWEP.Primary.Ammo = "smg1" -- what ammo type the gun uses
 SWEP.MagID = "m1carbine" -- the magazine pool this gun draws from
@@ -89,7 +89,7 @@ SWEP.SpeedMult = 0.94
 SWEP.SightedSpeedMult = 0.8
 SWEP.SightTime = 0.27
 SWEP.VisualRecoilMult = 0.75
-SWEP.RecoilRise = 0.75
+SWEP.RecoilRise = 0.5
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -102,8 +102,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector (-6.85, -12.5, 3.3),
-    Ang = Angle(0, 0.05, 0),
+    Pos = Vector (-6.85, -12, 3.33),
+    Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -306,8 +306,8 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
-        Source = {"shoot"},
-        Time = 0.8,
+        Source = "shoot_iron",
+        Time = 0.4,
         ShellEjectAt = 0,
     },
     ["reload"] = {
