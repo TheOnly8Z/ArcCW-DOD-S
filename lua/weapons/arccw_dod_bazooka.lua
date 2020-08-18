@@ -4,13 +4,15 @@ SWEP.Category = "ArcCW - DOD:S" -- edit this if you like
 SWEP.AdminOnly = false
 SWEP.PrintName = "Bazooka"
 SWEP.TrueName = "M1A1 Bazooka"
-SWEP.Trivia_Class = "Rocket launcher"
-SWEP.Trivia_Desc = "The M1 Bazooka was a rather revolutionary rocket launcher when it came to it's design. Many other rocket launchers around then based their design off of the Bazooka due to it's simplicity."
+SWEP.Trivia_Class = "Rocket Launcher"
+SWEP.Trivia_Desc = "Iconic and innovative rocket launcher allowing for man-portable anti-tank capabilities. The term 'bazooka' became associated with all rocket launchers as a result."
 SWEP.Trivia_Manufacturer = "US Army"
 SWEP.Trivia_Calibre = "60mm Rocket"
 SWEP.Trivia_Mechanism = "Fin-Stabilized Rocket"
 SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = "1942"
+SWEP.Trivia_Year = 1942
+
+SWEP.Slot = 4
 
 SWEP.UseHands = true
 
@@ -65,9 +67,9 @@ SWEP.NotForNPCS = false
 SWEP.NPCWeaponType = "weapon_rpg"
 SWEP.NPCWeight = 10
 
-SWEP.AccuracyMOA = 30 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 750 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 500 -- inaccuracy added by moving. Applies in sights as well! Walking speed is considered as "maximum".
+SWEP.AccuracyMOA = 20 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 300 -- inaccuracy added by moving. Applies in sights as well! Walking speed is considered as "maximum".
 SWEP.SightsDispersion = 0 -- dispersion that remains even in sights
 
 SWEP.ShootWhileSprint = false
@@ -106,7 +108,7 @@ SWEP.ProceduralIronFire = false
 SWEP.SightTime = 0.5
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "shotgun"
+SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.CanBash = true
@@ -123,6 +125,9 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(0.532, -6, 0)
 SWEP.HolsterAng = Angle(-4.633, 36.881, 0)
+
+SWEP.BarrelOffsetSighted = Vector(0, 0, 0)
+SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.BarrelLength = 24
 
@@ -201,7 +206,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Ammo Type",
-        Slot = "ammo_rocket"
+        Slot = "dod_rocket"
     },
     {
         PrintName = "Perk",
@@ -227,51 +232,11 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 2,
+        Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
         FrameRate = 30,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
     },
-    ["reload_empty"] = {
-        Source = "reload",
-        Time = 2,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_REVOLVER,
-        FrameRate = 30,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-    },
-    -- ["draw"] = {
-    --     RestoreAmmo = 1, -- only used by shotgun empty insert reload
-    --     Source = "deploy",
-    --     RareSource = "", -- 1/100 chance of playing this animation instead
-    --     Time = 0.5,
-    --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2, -- third person animation to play when this animation is played
-    --     TPAnimStartTime = 0, -- when to start it from
-    --     Checkpoints = {}, -- time checkpoints. If weapon is unequipped, the animation will continue to play from these checkpoints when reequipped.
-    --     ShellEjectAt = 0, -- animation includes a shell eject at these times
-    --     LHIKIn = 0.25, -- left hand inverse kinematics. In/Out controls how long it takes to switch to regular animation.
-    --     LHIKOut = 0.25, -- (not actually inverse kinematics)
-    --     LHIK = true, -- basically disable foregrips on this anim
-    --     SoundTable = {
-    --         {
-    --             s = "", -- sound; can be string or table
-    --             p = 100, -- pitch
-    --             v = 75, -- volume
-    --             t = 1, -- time at which to play relative to Animations.Time
-    --             c = CHAN_ITEM -- channel to play the sound
-    --         }
-    --     },
-    --     ViewPunchTable = {
-    --         {
-    --             p = Vector(0, 0, 0),
-    --             t = 1
-    --         }
-    --     },
-    --     ProcDraw = false, -- for draw/deploy animations, always procedurally draw in addition to playing animation
-    --     ProcHolster = false -- procedural holster weapon, THEN play animation
-    --     LastClip1OutTime = 0 -- when should the belt visually replenish on a belt fed
-    -- }
 }
