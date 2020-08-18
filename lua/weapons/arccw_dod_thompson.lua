@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "Annihilator .45"
 SWEP.TrueName = "M1A1 Thompson"
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "Expensive automatic SMG used in WWII by the US and Allies before shifting towards cheaper alternatives. For a premium, it offers reasonable recoil control and great firepower - though the firerate was more of a detriment than an advantage."
+SWEP.Trivia_Desc = "Expensive automatic SMG used in WWII by the US and Allies before shifting towards cheaper alternatives. For a premium, it offers great firepower - though it is difficult to control."
 SWEP.Trivia_Manufacturer = "Auto-Ordnance"
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Blowback"
@@ -25,9 +25,9 @@ SWEP.ViewModel = "models/weapons/arccw/c_dod_thompson.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_thompson.mdl"
 SWEP.ViewModelFOV = 60
 
-SWEP.Damage = 33
-SWEP.DamageMin = 21 -- damage done at maximum range
-SWEP.Range = 40 -- in METRES
+SWEP.Damage = 34
+SWEP.DamageMin = 20 -- damage done at maximum range
+SWEP.Range = 35 -- in METRES
 SWEP.Penetration = 3
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -43,8 +43,8 @@ SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 50
 SWEP.ReducedClipSize = 20
 
-SWEP.Recoil = 0.70
-SWEP.RecoilSide = 0.5
+SWEP.Recoil = 0.85
+SWEP.RecoilSide = 0.6
 SWEP.RecoilRise = 0.3
 
 SWEP.Delay = 60 / 750 -- 60 / RPM.
@@ -154,9 +154,9 @@ SWEP.AttachmentElements = {
             {
                 Model = "models/weapons/arccw/atts/mount_rail.mdl",
                 Bone = "v_thompson.root2",
-                Scale = Vector(2, 1, 1.5),
+                Scale = Vector(1, 1, 1),
                 Offset = {
-                    pos = Vector(-6.5, -7.5, 0.05),
+                    pos = Vector(-7, -7.5, 0.05),
                     ang = Angle(0, 0, -90),
                 }
             }
@@ -164,7 +164,7 @@ SWEP.AttachmentElements = {
         WMElements = {
             {
                 Model = "models/weapons/arccw/atts/mount_rail.mdl",
-                Scale = Vector(2, 1, 1.5),
+                Scale = Vector(1, 1, 1),
                 Offset = {
                     pos = Vector(1.25, 0.725, -4.2),
                     ang = Angle(170, -180, 0)
