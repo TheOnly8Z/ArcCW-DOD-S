@@ -365,7 +365,7 @@ SWEP.Animations = {
                 s = "ArcCW_DOD_Garand.ClipDing",
                 e = "arccw_shell_dod_enbloc",
                 att = 4,
-                mag = 120,
+                mag = 70,
             }
         },
     },

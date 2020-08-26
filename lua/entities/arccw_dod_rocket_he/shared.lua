@@ -9,7 +9,7 @@ ENT.Spawnable 			= false
 
 AddCSLuaFile()
 
-ENT.Model = "models/weapons/arccw/w_dod_panzerschreck_rocket.mdl"
+ENT.Model = "models/weapons/arccw/w_dod_bazooka_rocket.mdl"
 ENT.Ticks = 0
 ENT.FuseTime = 10
 
@@ -46,7 +46,7 @@ end
 function ENT:Think()
     if SERVER then
         local phys = self:GetPhysicsObject()
-        phys:ApplyForceCenter( self:GetAngles():Forward() * 800 )
+        phys:ApplyForceCenter( self:GetAngles():Forward() * 500 )
     else
         if self.Ticks % 5 == 0 then
             local emitter = ParticleEmitter(self:GetPos())
@@ -94,8 +94,7 @@ function ENT:Detonate()
         attacker = self.Owner
     end
 
-    util.BlastDamage(self, attacker, self:GetPos(), 32, 450)
-    util.BlastDamage(self, attacker, self:GetPos(), 300, 90)
+    util.BlastDamage(self, attacker, self:GetPos(), 500, 100)
 
     self:FireBullets({
         Attacker = attacker,

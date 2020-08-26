@@ -77,16 +77,14 @@ end
 
 function ENT:Detonate()
     if !self:IsValid() then return end
-    local effectdata = EffectData()
-        effectdata:SetOrigin( self:GetPos() )
+    self:EmitSound("weapons/arccw/smokegrenade/smoke_emit.wav", 90, 100, 1, CHAN_AUTO)
 
-    if self:WaterLevel() >= 1 then
-        util.Effect( "WaterSurfaceExplosion", effectdata )
-        self:EmitSound("weapons/underwater_explode3.wav", 125, 100, 1, CHAN_AUTO)
-    else
-        util.Effect( "Explosion", effectdata)
-        self:EmitSound("phx/kaboom.wav", 125, 100, 1, CHAN_AUTO)
-    end
+    local cloud = ents.Create( "arccw_smoke" )
+
+    if !IsValid(cloud) then return end
+
+    cloud:SetPos(self:GetPos())
+    cloud:Spawn()
 
     local attacker = self
 
@@ -94,20 +92,7 @@ function ENT:Detonate()
         attacker = self.Owner
     end
 
-    util.BlastDamage(self, attacker, self:GetPos(), 32, 450)
-    util.BlastDamage(self, attacker, self:GetPos(), 300, 90)
-
-    self:FireBullets({
-        Attacker = attacker,
-        Damage = 0,
-        Tracer = 0,
-        Distance = 20000,
-        Dir = self:GetVelocity(),
-        Src = self:GetPos(),
-        Callback = function(att, tr, dmg)
-            util.Decal("Scorch", tr.StartPos, tr.HitPos - (tr.HitNormal * 16), self)
-        end
-    })
+    util.BlastDamage(self, attacker, self:GetPos(), 300, 60)
 
     self:Remove()
 end

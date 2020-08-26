@@ -127,16 +127,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 SWEP.ActivePos = Vector(-1, 0, 2.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(-6, 0, 2)
-SWEP.CrouchAng = Angle(0, 0, -35)
-
 SWEP.CustomizePos = Vector(8, -4, 0)
 
 SWEP.HolsterPos = Vector(1, -8, -4)
 SWEP.HolsterAng = Angle(36.533, 0, 0)
-
-SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
-SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.AttachmentElements = {
     ["stock"] = {
@@ -164,20 +158,27 @@ SWEP.AttachmentElements = {
 
 SWEP.ExtraSightDist = 2
 
+-- UGLIEST HACK I'VE EVER DONE
+-- The slide bone is *beyond fucked*, which means this is to manually overwrite the autosolve result to get normal sights
+SWEP.ReferencePosCache = {
+    [46] = {
+        Pos = Vector(3.85, 3.92, -12),
+        Ang = Angle(-90, -90, 0),
+    }
+}
+
 SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
         Slot = "optic_lp", -- what kind of attachments can fit here, can be string or table
-        Bone = "ValveBiped.slide", -- relevant bone any attachments will be mostly referring to
+        Bone = "ValveBiped.attachpos2", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0.05, -0.201, 0.2), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, -90, 0),
+            vpos = Vector(0, -0.1, 0), -- offset that the attachment will be relative to the bone
+            vang = Angle(90, 0, -90),
             wpos = Vector(4.129, 1.476, -4.216),
             wang = Angle(-2.829, -4.902, 180)
         },
-        CorrectiveAng = Angle(0, 0, 0),
-        CorrectivePos = Vector(0, 0, 0)
     },
     {
         PrintName = "Muzzle",
@@ -240,18 +241,26 @@ SWEP.Attachments = {
 }
 
 SWEP.Animations = {
-    ["idle"] = false,
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.3,
     },
     ["draw"] = {
         Source = "draw",
         Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.3,
     },
     ["ready"] = {
         Source = "ready",
         Time = 1.2,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0.3,
     },
     ["fire"] = {
         Source = {"shoot1", "shoot2", "shoot3"},

@@ -28,8 +28,8 @@ SWEP.WorldModel = "models/weapons/arccw/w_dod_m1carbine.mdl"
 SWEP.ViewModelFOV = 54
 
 SWEP.Damage = 32
-SWEP.DamageMin = 18 -- damage done at maximum range
-SWEP.Range = 75 -- in METRES
+SWEP.DamageMin = 22 -- damage done at maximum range
+SWEP.Range = 120 -- in METRES
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -49,7 +49,7 @@ SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.4
 SWEP.RecoilRise = 1
 
-SWEP.Delay = 60 / 750 -- 60 / RPM.
+SWEP.Delay = 60 / 700 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -63,9 +63,9 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 170
 
-SWEP.AccuracyMOA = 12 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 400 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 100
+SWEP.AccuracyMOA = 7 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 120
 
 SWEP.Primary.Ammo = "smg1" -- what ammo type the gun uses
 SWEP.MagID = "m1carbine" -- the magazine pool this gun draws from
@@ -86,10 +86,10 @@ SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
 SWEP.SpeedMult = 0.94
-SWEP.SightedSpeedMult = 0.8
-SWEP.SightTime = 0.27
+SWEP.SightedSpeedMult = 0.75
+SWEP.SightTime = 0.3
 SWEP.VisualRecoilMult = 0.75
-SWEP.RecoilRise = 0.75
+SWEP.RecoilRise = 0.5
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     -- [0] = "bulletchamber",
@@ -102,9 +102,9 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector (-6.85, -12.5, 3.3),
-    Ang = Angle(0, 0.05, 0),
-    Magnification = 1.1,
+    Pos = Vector (-6.85, -12, 3.33),
+    Ang = Angle(0, 0, 0),
+    Magnification = 1.25,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
 }
@@ -129,7 +129,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.BarrelLength = 18
 
-SWEP.ExtraSightDist = 5
+SWEP.ExtraSightDist = 10
 
 SWEP.AttachmentElements = {
     ["noch"] = {
@@ -141,9 +141,10 @@ SWEP.AttachmentElements = {
             {
                 Model = "models/weapons/arccw/atts/mount_rail.mdl",
                 Bone = "ValveBiped.m1_base",
-                Scale = Vector(1.5, 1, 1),
+                Scale = Vector(1, 1, 1),
                 Offset = {
-                    pos = Vector(-3.5, 0.25, 6.75),
+                    --pos = Vector(-3.5, 0.25, 6.75),
+                    pos = Vector(-3.5, 0.25, 14),
                     ang = Angle(90, 0, 0),
                 }
             }
@@ -186,7 +187,8 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "ValveBiped.m1_base", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(-3.650, 0.25, 7.05), -- offset that the attachment will be relative to the bone
+            -- vpos = Vector(-3.650, 0.25, 7.05),
+            vpos = Vector(-3.650, 0.25, 14),
             vang = Angle(90, 0, 0),
             wpos = Vector(7.15, 1.365, -4.85),
             wang = Angle(170, -180, 0),
@@ -210,8 +212,8 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip"},
-        VMScale = Vector(1, 1, 1),
+        Slot = "foregrip",
+        VMScale = Vector(1.1, 1.1, 1.1),
         Bone = "ValveBiped.m1_base",
         Offset = {
             vpos = Vector(-1.6, 0.25, 14),
@@ -219,7 +221,7 @@ SWEP.Attachments = {
             wpos = Vector(13, 1.365, -3.75),
             wang = Angle(170, 180, 0),
         },
-        MergeSlots = {4},
+        MergeSlots = {4, 5},
     },
     {
         Hidden = true,
@@ -227,6 +229,17 @@ SWEP.Attachments = {
         Bone = "ValveBiped.m1_base",
         Offset = {
             vpos = Vector(-1.6, 0.25, 16),
+            vang = Angle(90, 0, 0),
+            wpos = Vector(16, 1.365, -4.7),
+            wang = Angle(170, 180, 0),
+        },
+    },
+    {
+        Hidden = true,
+        Slot = "ubgl",
+        Bone = "ValveBiped.m1_base",
+        Offset = {
+            vpos = Vector(-1.6, 0.25, 10),
             vang = Angle(90, 0, 0),
             wpos = Vector(16, 1.365, -4.7),
             wang = Angle(170, 180, 0),
@@ -306,8 +319,8 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
-        Source = {"shoot"},
-        Time = 0.8,
+        Source = "shoot_iron",
+        Time = 0.4,
         ShellEjectAt = 0,
     },
     ["reload"] = {

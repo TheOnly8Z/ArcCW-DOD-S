@@ -23,6 +23,7 @@ att.UBGL_Ammo = "smg1_grenade"
 att.UBGL_RPM = 300
 att.UBGL_Recoil = 2
 att.UBGL_Capacity = 1
+att.UBGL_BaseAnims = true
 
 local function Ammo(wep)
     return wep.Owner:GetAmmoCount("smg1_grenade")
