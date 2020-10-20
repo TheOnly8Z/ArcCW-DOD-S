@@ -219,21 +219,6 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },
-    {
-        PrintName = "Stock",
-        Slot = "stock",
-        DefaultAttName = "Standard Stock"
-    },
-    {
-        PrintName = "Fire Group",
-        Slot = "fcg",
-        DefaultAttName = "Standard FCG"
-    },
-    {
         PrintName = "Ammo Type",
         Slot = "ammo_bullet"
     },

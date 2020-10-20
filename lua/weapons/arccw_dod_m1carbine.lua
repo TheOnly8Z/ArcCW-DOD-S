@@ -136,30 +136,6 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 1}},
         WMBodygroups = {{ind = 1, bg = 1}},
     },
-    ["mount"] = {
-        VMElements = {
-            {
-                Model = "models/weapons/arccw/atts/mount_rail.mdl",
-                Bone = "ValveBiped.m1_base",
-                Scale = Vector(1, 1, 1),
-                Offset = {
-                    --pos = Vector(-3.5, 0.25, 6.75),
-                    pos = Vector(-3.5, 0.25, 14),
-                    ang = Angle(90, 0, 0),
-                }
-            }
-        },
-        WMElements = {
-            {
-                Model = "models/weapons/arccw/atts/mount_rail.mdl",
-                Scale = Vector(-1, -1, 1),
-                Offset = {
-                    pos = Vector(7.15, 1.365, -4.75),
-                    ang = Angle(-10, 0, 170)
-                }
-            }
-        },
-    },
     ["reducedmag"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
         WMBodygroups = {{ind = 2, bg = 1}},
@@ -168,7 +144,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 2, bg = 2}},
         WMBodygroups = {{ind = 2, bg = 2}},
     },
-    ["fcg_auto"] = {
+    ["dod_fcg_auto"] = {
         TrueNameChange = "M2 Carbine",
         NameChange = "Cantrip E2",
     }
@@ -258,18 +234,8 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },
-    {
-        PrintName = "Stock",
-        Slot = "stock",
-        DefaultAttName = "Standard Stock"
-    },
-    {
         PrintName = "Fire Group",
-        Slot = "fcg",
+        Slot = {"fcg", "dod_fcg"},
         DefaultAttName = "Standard FCG"
     },
     {

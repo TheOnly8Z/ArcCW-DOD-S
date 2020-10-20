@@ -128,27 +128,6 @@ SWEP.BarrelOffsetHip = Vector(0, 0, 0)
 SWEP.ExtraSightDist = 10
 
 SWEP.AttachmentElements = {
-    ["stock"] = {
-        VMElements = {
-            {
-                Model = "models/weapons/arccw/atts/stock_fab.mdl",
-                Bone = "ValveBiped.p38_base",
-                Offset = {
-                    pos = Vector(-1.25, 0, -0.25),
-                    ang = Angle(90, 0, 180),
-                }
-            }
-        },
-        WMElements = {
-            {
-                Model = "models/weapons/arccw/atts/stock_fab.mdl",
-                Offset = {
-                    pos = Vector(1.85, 1.15, 1.15),
-                    ang = Angle(-10, 0, 0),
-                }
-            }
-        }
-    }
 }
 
 SWEP.Attachments = {
@@ -208,25 +187,15 @@ SWEP.Attachments = {
         },
     },
     { --4
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },
-    { --5
         PrintName = "Stock",
-        Slot = "stock",
+        Slot = "dod_p38_stock",
         InstalledEles = {"stock"},
     },
-    { --6
-        PrintName = "Fire Group",
-        Slot = "fcg",
-        DefaultAttName = "Standard FCG"
-    },
-    { --7
+    { --5
         PrintName = "Ammo Type",
         Slot = "ammo_bullet"
     },
-    { --8
+    { --6
         PrintName = "Perk",
         Slot = "perk"
     },

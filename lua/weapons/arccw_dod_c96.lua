@@ -48,7 +48,7 @@ SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 10
 
-SWEP.Recoil = 1
+SWEP.Recoil = 0.75
 SWEP.RecoilSide = 0.275
 SWEP.RecoilRise = 1.25
 
@@ -145,7 +145,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 2, bg = 2}},
         WMBodygroups = {{ind = 0, bg = 2}},
     },
-    ["fcg_semi"] = {
+    ["dod_fcg_semi"] = {
         TrueNameChange = "Mauser C96",
         NameChange = "Ratter M1896",
     }
@@ -213,19 +213,14 @@ SWEP.Attachments = {
             wang = Angle(-10, 0, 90),
         },
     },
-    { --5
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },
     { --6
         PrintName = "Stock",
-        Slot = "stock",
+        Slot = "dod_c96_stock",
         InstalledEles = {"stock"},
     },
     { --7
         PrintName = "Fire Group",
-        Slot = "fcg",
+        Slot = {"fcg", "dod_fcg"},
         DefaultAttName = "Standard FCG"
     },
     { --8

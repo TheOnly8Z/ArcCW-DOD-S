@@ -143,29 +143,6 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 1}},
         WMBodygroups = {},
     },
-    ["mount"] = {
-        VMElements = {
-            {
-                Model = "models/weapons/arccw/atts/mount_rail.mdl",
-                Bone = "ValveBiped.garand_base",
-                Scale = Vector(1, 1, 1),
-                Offset = {
-                    pos = Vector(-3.5, 0.6, 15),
-                    ang = Angle(90, 0, 0)
-                }
-            }
-        },
-        WMElements = {
-            {
-                Model = "models/weapons/arccw/atts/mount_rail.mdl",
-                Scale = Vector(1, 1, 1),
-                Offset = {
-                    pos = Vector(17, 0.7, -6.7),
-                    ang = Angle(170, 180, 0)
-                }
-            }
-        },
-    },
 }
 
 SWEP.ExtraSightDist = 10
@@ -226,7 +203,7 @@ SWEP.Attachments = {
             wmin = Vector(13, 0.7, -3.5),
             wmax = Vector(24, 0.7, -6.3),
         },
-        MergeSlots = {12}
+        MergeSlots = {10}
     },
     {
         PrintName = "Tactical",
@@ -238,16 +215,6 @@ SWEP.Attachments = {
             wpos = Vector(27, 0.7, -7),
             wang = Angle(170, 180, 0)
         },
-    },
-    {
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },
-    {
-        PrintName = "Stock",
-        Slot = "stock",
-        DefaultAttName = "Standard Stock"
     },
     {
         PrintName = "Fire Group",

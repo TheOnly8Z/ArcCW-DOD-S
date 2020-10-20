@@ -210,21 +210,6 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },
-    {
-        PrintName = "Stock",
-        Slot = "stock",
-        DefaultAttName = "Standard Stock"
-    },
-    {
-        PrintName = "Fire Group",
-        Slot = "fcg",
-        DefaultAttName = "Standard FCG"
-    },
-    {
         PrintName = "Ammo Type",
         Slot = "ammo_bullet"
     },
@@ -264,12 +249,12 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"shoot1", "shoot2", "shoot3"},
-        Time = 0.5,
+        Time = 1,
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
-        Source = {"idle"},
-        Time = 0,
+        Source = {"shoot1", "shoot2", "shoot3"},
+        Time = 1,
         ShellEjectAt = 0,
     },
     ["reload"] = {

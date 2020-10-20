@@ -177,7 +177,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"bipod", "style_pistol"},
+        Slot = {"style_pistol"}, -- "bipod", 
         Bone = "v_mp40.attachpos",
         Offset = {
             vpos = Vector(0, 0.3, 12),
@@ -198,22 +198,12 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },
-    {
         PrintName = "Stock",
-        Slot = "stock",
+        Slot = "dod_mp40_stock",
         DefaultAttName = "No Stock",
-        Installed = "stock_skeleton",
+        --Installed = "dod_mp40_stock",
         InstalledEles = {"stock"},
         FreeSlot = true,
-    },
-    {
-        PrintName = "Fire Group",
-        Slot = "fcg",
-        DefaultAttName = "Standard FCG"
     },
     {
         PrintName = "Ammo Type",

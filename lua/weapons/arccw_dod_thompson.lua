@@ -149,7 +149,7 @@ SWEP.AttachmentElements = {
             Magnification = 1.5,
         }
     },
-    ["mount"] = {
+    /*["mount"] = {
         VMElements = {
             {
                 Model = "models/weapons/arccw/atts/mount_rail.mdl",
@@ -171,7 +171,7 @@ SWEP.AttachmentElements = {
                 }
             }
         },
-    },
+    },*/
 }
 
 SWEP.Attachments = {
@@ -199,7 +199,7 @@ SWEP.Attachments = {
         MergeSlots = {2},
     },
     {
-        Slot = "irons_alt",
+        Slot = "dods_alt_irons",
         InstalledEles = {"altirons"}
     },
     {
@@ -254,22 +254,12 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },
-    {
         PrintName = "Stock",
-        Slot = "stock",
+        Slot = "dod_thompson_stock",
         DefaultAttName = "No Stock",
-        Installed = "stock_sturdy",
+        --Installed = "dod_thompson_stock",
         InstalledEles = {"stock"},
         FreeSlot = true,
-    },
-    {
-        PrintName = "Fire Group",
-        Slot = "fcg",
-        DefaultAttName = "Standard FCG"
     },
     {
         PrintName = "Ammo Type",

@@ -200,11 +200,6 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },
-    {
         PrintName = "Ammo Type",
         Slot = "dod_rocket"
     },

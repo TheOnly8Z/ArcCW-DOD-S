@@ -133,27 +133,6 @@ SWEP.HolsterPos = Vector(1, -8, -4)
 SWEP.HolsterAng = Angle(36.533, 0, 0)
 
 SWEP.AttachmentElements = {
-    ["stock"] = {
-        VMElements = {
-            {
-                Model = "models/weapons/arccw/atts/stock_fab.mdl",
-                Bone = "ValveBiped.Colt_1911_base",
-                Offset = {
-                    pos = Vector(0, 1.5, 3.25),
-                    ang = Angle(-90, 0, -90)
-                }
-            }
-        },
-        WMElements = {
-            {
-                Model = "models/weapons/arccw/atts/stock_fab.mdl",
-                Offset = {
-                    pos = Vector(0, 1, 0),
-                    ang = Angle(0, -4.211, 0)
-                }
-            }
-        }
-    }
 }
 
 SWEP.ExtraSightDist = 2
@@ -213,22 +192,6 @@ SWEP.Attachments = {
             wpos = Vector(11.711, 2.187, -3.064),
             wang = Angle(0, -4.211, 180)
         },
-    },
-    {
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },
-    {
-        PrintName = "Stock",
-        Slot = "stock",
-        DefaultAttName = "No Stock",
-        InstalledEles = {"stock"},
-    },
-    {
-        PrintName = "Fire Group",
-        Slot = "fcg",
-        DefaultAttName = "Standard FCG"
     },
     {
         PrintName = "Ammo Type",

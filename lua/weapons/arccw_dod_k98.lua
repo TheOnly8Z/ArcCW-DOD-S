@@ -175,10 +175,10 @@ SWEP.Attachments = {
         },
         InstalledEles = {"mount"},
         KeepBaseIrons = true,
-        MergeSlots = {11, 12},
+        MergeSlots = {10, 11},
         CorrectiveAng = false,
         CorrectivePos = false
-    },
+    }, --1
     {
         PrintName = "Backup Optic", -- print name
         Slot = "backup", -- what kind of attachments can fit here, can be string or table
@@ -190,7 +190,7 @@ SWEP.Attachments = {
             wang = Angle(-10, 0, 180)
         },
         KeepBaseIrons = true,
-    },
+    }, --2
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
@@ -202,8 +202,8 @@ SWEP.Attachments = {
             wpos = Vector(34, 0.6, -9.1),
             wang = Angle(-10, 0, 180)
         },
-        MergeSlots = {14},
-    },
+        MergeSlots = {13},
+    }, --3
     {
         PrintName = "Underbarrel",
         Slot = {"foregrip", "bipod"},
@@ -220,8 +220,8 @@ SWEP.Attachments = {
             wmin = Vector(10, 0.6, -3.25),
             wmax = Vector(23, 0.6, -6)
         },
-        MergeSlots = {13},
-    },
+        MergeSlots = {12},
+    }, --4
     {
         PrintName = "Tactical",
         Slot = "tac",
@@ -232,25 +232,27 @@ SWEP.Attachments = {
             wpos = Vector(24, 0.8, -7),
             wang = Angle(-10, 0, -90)
         },
-    },
+    }, --5
+    /*
     {
         PrintName = "Grip",
         Slot = "grip",
         DefaultAttName = "Standard Grip"
-    },
+    }, -- NULL / 6
+    */
     {
-        PrintName = "Stock",
-        Slot = "stock",
-        DefaultAttName = "Standard Stock"
-    },
+        PrintName = "Clip",
+        Slot = "dod_clip",
+        DefaultAttName = "Bullet by bullet."
+    }, -- 6 / 7
     {
         PrintName = "Ammo Type",
-        Slot = {"ammo_bullet", "dod_clip"}
-    },
+        Slot = {"ammo_bullet"}
+    }, --6 / 8
     {
         PrintName = "Perk",
         Slot = "perk"
-    },
+    }, --7 / 9
     {
         PrintName = "Charm",
         Slot = "charm",
@@ -262,7 +264,7 @@ SWEP.Attachments = {
             wpos = Vector(12, 1.4, -4.5),
             wang = Angle(-10, 0, 180)
         },
-    },
+    }, --8 / 10
     {
         Hidden = true,
         Slot = "optic_sniper",
@@ -278,7 +280,7 @@ SWEP.Attachments = {
         InstalledEles = {"mount"},
         GivesFlags = {"dod_scope"},
         ExcludeFlags = {"dod_clip"},
-    },
+    }, --9 / 11
     {
         Hidden = true,
         Slot = "optic_k98_scope",
@@ -293,7 +295,7 @@ SWEP.Attachments = {
         KeepBaseIrons = true,
         GivesFlags = {"dod_scope"},
         ExcludeFlags = {"dod_clip"},
-    },
+    }, --10 / 12
     {
         Hidden = true,
         Slot = "ubgl",
@@ -312,13 +314,13 @@ SWEP.Attachments = {
         },
         GivesFlags = {"dod_ubgl"},
         ExcludeFlags = {"dod_rfgl"}
-    },
+    }, --11 / 13
     {
         Hidden = true,
         Slot = "dod_k98_rfgl",
         ExcludeFlags = {"dod_ubgl"},
         GivesFlags = {"dod_rfgl"}
-    }
+    } --12 / 14
 }
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
@@ -343,7 +345,7 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 
     end
 
-    if (wep.Attachments[12].Installed or wep.Attachments[11].Installed) and wep:GetBuff_Override("Override_ShotgunReload") != false then
+    if (wep.Attachments[11].Installed or wep.Attachments[10].Installed) and wep:GetBuff_Override("Override_ShotgunReload") != false then
         newAnim = newAnim .. "_optic"
     end
 
@@ -351,13 +353,13 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 end
 
 SWEP.Hook_SelectCycleAnimation = function(wep, anim)
-    if wep.Attachments[12].Installed or wep.Attachments[11].Installed or wep:GetState() == ArcCW.STATE_SIGHTS then
+    if wep.Attachments[11].Installed or wep.Attachments[10].Installed or wep:GetState() == ArcCW.STATE_SIGHTS then
         return "cycle_optic"
     end
 end
 
 SWEP.Hook_SelectInsertAnimation = function(wep, data)
-    if wep.Attachments[12].Installed or wep.Attachments[11].Installed then
+    if wep.Attachments[11].Installed or wep.Attachments[10].Installed then
         return {
             count = data.count,
             anim = "sgreload_insert_optic",
@@ -384,7 +386,7 @@ end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     -- Only play anims on the RFGL
-    if not wep.Attachments[14].Installed and (anim == "enter_ubgl" or anim == "exit_ubgl" or anim == "idle_ubgl") then
+    if not wep.Attachments[13].Installed and (anim == "enter_ubgl" or anim == "exit_ubgl" or anim == "idle_ubgl") then
         return (anim == "idle_ubgl") and "idle" or false
     end
 end

@@ -92,7 +92,7 @@ sound.Add({
 
 sound.Add({
     name = "ArcCW_DOD_Garand.ClipDing",
-    channel = CHAN_ITEM,
+    channel = CHAN_USER_BASE + 1,
     level = 80,
     sound = "weapons/arccw/dod/garand_clipding.wav"
 })
