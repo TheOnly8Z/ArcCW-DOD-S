@@ -243,7 +243,7 @@ SWEP.Attachments = {
     {
         PrintName = "Clip",
         Slot = "dod_clip",
-        DefaultAttName = "Bullet by bullet."
+        DefaultAttName = nil --"Bullet by bullet."
     }, -- 6 / 7
     {
         PrintName = "Ammo Type",

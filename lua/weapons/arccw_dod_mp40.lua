@@ -143,7 +143,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 1}},
         WMBodygroups = {{ind = 3, bg = 1}},
         Mult_Recoil = 0.7,
-        Mult_MoveSpeed = 0.9,
+        Mult_SpeedMult = 0.9,
     },
 }
 
