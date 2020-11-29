@@ -1,6 +1,6 @@
-att.PrintName = "Semi-Automatic (DODS+)"
-att.Icon = Material("entities/acwatt_dod_fcg_semi.png")
-att.Description = "Firemode conversion allowing for 3-round burst and semi-auto fire modes. Developed for the M16A2 with the conservation of ammunition in mind."
+att.PrintName = "Semi-Automatic"
+att.Icon = Material("entities/acwatt_dod_fcg_semi.png", "smooth mips")
+att.Description = "Firemode conversion for semi-automatic only fire."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -8,6 +8,8 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = "dod_fcg"
 att.SortOrder = 100
+
+att.Mult_AccuracyMOA = 0.5
 
 att.Override_Firemodes = {
     {

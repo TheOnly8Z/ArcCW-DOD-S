@@ -1,5 +1,5 @@
 att.PrintName = "Broomhandle Stock"
-att.Icon = Material("entities/acwatt_dod_c96_stock.png")
+att.Icon = Material("entities/acwatt_dod_c96_stock.png", "smooth mips")
 att.Description = "Solid stock for the Mauser M712 provides better recoil control at the cost of maneuverability."
 att.Desc_Pros = {
 }

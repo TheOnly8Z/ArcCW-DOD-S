@@ -2,7 +2,7 @@ SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - DOD:S" -- edit this if you like
 SWEP.AdminOnly = false
-SWEP.PrintName = "Kreissäge-42"
+SWEP.PrintName = "Kreissäge M42"
 SWEP.TrueName = "MG42"
 SWEP.Trivia_Class = "Machine Gun"
 SWEP.Trivia_Desc = "Heavy machine gun with a ludicurous rate of fire, nicknamed \"Hitler's Buzzsaw\" by Allied forces due to its terrifying sound. Its design is revolutionary and can be seen in many modern machine guns today."
@@ -68,8 +68,8 @@ SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 90 -- pitch of shoot sound
 
 SWEP.ShootSound = "^weapons/mg42_shoot.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
-SWEP.DistantShootSound = "weapons/mg42_shoot.wav"
+SWEP.ShootSoundSilenced = nil --"weapons/arccw/m4a1/m4a1_silencer_01.wav"
+SWEP.DistantShootSound = nil --"weapons/mg42_shoot.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_minimi"
 

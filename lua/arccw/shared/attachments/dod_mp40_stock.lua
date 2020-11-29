@@ -1,5 +1,5 @@
 att.PrintName = "MP40 Skeleton Stock"
-att.Icon = Material("entities/acwatt_dod_mp40_stock.png")
+att.Icon = Material("entities/acwatt_dod_mp40_stock.png", "smooth mips")
 att.Description = "Lightweight compact stock that folds under the gun."
 att.Desc_Pros = {
 }

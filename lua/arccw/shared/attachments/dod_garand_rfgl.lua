@@ -2,11 +2,9 @@ att.PrintName = "M7 Grenade Launcher"
 att.Icon = Material("entities/acwatt_dod_garand_rfgl.png", "mips smooth")
 att.Description = "Muzzle attachment that allows for the loading and firing of explosive rifle grenades. Top-affixed mounting mechanism allows for a larger payload, but is more cumbersome to fire."
 att.Desc_Pros = {
-    "+ Selectable grenade launcher",
+    "pro.rfgl",
 }
-att.Desc_Cons = {
-    "- Cannot aim when using launcher"
-}
+att.Desc_Cons = {}
 att.AutoStats = true
 att.Slot = "dod_garand_rfgl"
 att.SortOrder = 100
@@ -30,7 +28,7 @@ local function Ammo(wep)
 end
 
 att.Hook_ShouldNotSight = function(wep)
-    if wep:GetNWBool("ubgl") then return true end
+    if wep:GetInUBGL() then return true end
 end
 
 att.UBGL_NPCFire = function(wep, ubgl)

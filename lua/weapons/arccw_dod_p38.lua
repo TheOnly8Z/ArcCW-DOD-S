@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - DOD:S" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Wagner M1938"
+SWEP.PrintName = "Wagner M38"
 SWEP.TrueName = "Walther P38"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "9mm semi-automatic pistol used as the standard issue side arm of the Third Reich."
@@ -72,7 +72,7 @@ SWEP.ShootVol = 110 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "^weapons/arccw/dod/p38_shoot.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw/usp/usp_01.wav"
+SWEP.ShootSoundSilenced = "weapons/arccw/dod/supp_pistol.wav"
 SWEP.DistantShootSound = nil --"weapons/arccw/glock18/glock18-1-distant.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"

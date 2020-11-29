@@ -75,8 +75,8 @@ SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "ArcCW_DOD_Garand.Shoot"
-SWEP.DistantShootSound = "weapons/arccw/g3sg1/g3sg1_distant_01.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
+SWEP.DistantShootSound = nil
+SWEP.ShootSoundSilenced = "weapons/arccw/dod/supp.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"
@@ -185,7 +185,7 @@ SWEP.Attachments = {
             wpos = Vector(35, 0.7, -9.3),
             wang = Angle(170, 180, 0)
         },
-        MergeSlots = {13}
+        MergeSlots = {11}
     },
     {
         PrintName = "Underbarrel",
@@ -241,7 +241,7 @@ SWEP.Attachments = {
             wang = Angle(170, 180, 0)
         },
     },
-    { -- 12
+    { -- 10
         Hidden = true,
         Slot = "ubgl",
         Bone = "ValveBiped.garand_base",
@@ -260,7 +260,7 @@ SWEP.Attachments = {
         GivesFlags = {"dod_ubgl"},
         ExcludeFlags = {"dod_rfgl"}
     },
-    { -- 13
+    { -- 11
         Hidden = true,
         Slot = "dod_garand_rfgl",
         ExcludeFlags = {"dod_ubgl"},

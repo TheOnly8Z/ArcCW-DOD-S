@@ -1,5 +1,5 @@
 att.PrintName = "Lone Wolf"
-att.Icon = Material("entities/sss1.png")
+att.Icon = Material("entities/sss1.png", "smooth mips")
 att.Description = "You'll become a one man army, capable of wiping out hordes of enemies."
 att.Desc_Pros = {
     "+ You're a one man army"
