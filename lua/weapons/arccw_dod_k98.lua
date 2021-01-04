@@ -165,7 +165,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        Slot = {"optic"},
+        Slot = {"optic", "optic_sniper"},
         Bone = "ValveBiped.k98_base",
         Offset = {
             vpos = Vector(4, 0, -13),
@@ -174,10 +174,12 @@ SWEP.Attachments = {
             wang = Angle(-10, 0, 180)
         },
         InstalledEles = {"mount"},
-        KeepBaseIrons = true,
-        MergeSlots = {10, 11},
+        KeepBaseIrons = false,
         CorrectiveAng = false,
-        CorrectivePos = false
+        CorrectivePos = false,
+        MergeSlots = {10},
+        GivesFlags = {"dod_scope"},
+        ExcludeFlags = {"dod_clip"},
     }, --1
     {
         PrintName = "Backup Optic", -- print name
