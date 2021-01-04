@@ -177,7 +177,7 @@ SWEP.Attachments = {
         KeepBaseIrons = false,
         CorrectiveAng = false,
         CorrectivePos = false,
-        MergeSlots = {10},
+        MergeSlots = {11},
         GivesFlags = {"dod_scope"},
         ExcludeFlags = {"dod_clip"},
     }, --1
@@ -235,13 +235,6 @@ SWEP.Attachments = {
             wang = Angle(-10, 0, -90)
         },
     }, --5
-    /*
-    {
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    }, -- NULL / 6
-    */
     {
         PrintName = "Clip",
         Slot = "dod_clip",
@@ -329,13 +322,10 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
     local newAnim = anim
 
     if wep:GetBuff_Override("Override_InsertAmount") == 5 then
-
         if anim == "sgreload_start" or anim == "sgreload_finish" or anim == "sgreload_start_empty" then
             return "null"
         end
-
     else
-
         -- An empty casing is in the weapon, play an animation that ejects that
         if wep:GetNWBool("cycle", false) and anim == "sgreload_start_empty" then
             newAnim = "sgreload_start_empty_shell"
@@ -344,7 +334,6 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
             newAnim = "reload_shell"
             wep:SetTimer(0.1, function() wep:SetNWBool("cycle", false) end)
         end
-
     end
 
     if (wep.Attachments[11].Installed or wep.Attachments[10].Installed) and wep:GetBuff_Override("Override_ShotgunReload") != false then
@@ -355,13 +344,13 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 end
 
 SWEP.Hook_SelectCycleAnimation = function(wep, anim)
-    if wep.Attachments[11].Installed or wep.Attachments[10].Installed or wep:GetState() == ArcCW.STATE_SIGHTS then
+    if wep.Attachments[11].Installed or wep.Attachments[1].Installed or wep:GetState() == ArcCW.STATE_SIGHTS then
         return "cycle_optic"
     end
 end
 
 SWEP.Hook_SelectInsertAnimation = function(wep, data)
-    if wep.Attachments[11].Installed or wep.Attachments[10].Installed then
+    if wep.Attachments[11].Installed or wep.Attachments[1].Installed then
         return {
             count = data.count,
             anim = "sgreload_insert_optic",
