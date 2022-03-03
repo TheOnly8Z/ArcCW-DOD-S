@@ -79,8 +79,8 @@ SWEP.DistantShootSound = nil --"weapons/arccw/ak47/ak47-1-distant.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"
-SWEP.ShellScale = 1.5
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
+SWEP.ShellScale = 1
+
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -102,7 +102,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector (-6.85, -12, 3.33),
+    Pos = Vector (-6.85, -9, 3.33),
     Ang = Angle(0, 0, 0),
     Magnification = 1.25,
     SwitchToSound = "", -- sound that plays when switching to this sight

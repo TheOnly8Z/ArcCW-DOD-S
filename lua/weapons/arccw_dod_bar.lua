@@ -80,7 +80,7 @@ SWEP.MoveDispersion = 150
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.MagID = "bar" -- the magazine pool this gun draws from
 
-SWEP.ShootVol = 115 -- volume of shoot sound
+SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "^weapons/arccw/dod/bar_shoot.wav"
@@ -90,7 +90,6 @@ SWEP.DistantShootSound = nil --"weapons/arccw/ak47/ak47-1-distant.wav"
 SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.ShellModel = "models/shells/shell_762nato.mdl"
 SWEP.ShellScale = 1.5
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -113,7 +112,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector (-6.25, -6.7881, 5.57),
+    Pos = Vector (-6.25, -5, 5.57),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -186,7 +185,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip"},
+        Slot = {"foregrip", "ubgl"},
         Bone = "ValveBiped.bar_base",
         Offset = {
             vpos = Vector(-0.35, -0.125, 17.5),

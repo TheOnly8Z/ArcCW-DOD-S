@@ -42,7 +42,7 @@ SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 5 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 10
+SWEP.ExtendedClipSize = 8
 SWEP.ReducedClipSize = 3
 
 SWEP.Recoil = 1
@@ -105,8 +105,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-6.68, -8, 3.849),
-    Ang = Angle(0.03, 0.01, 0),
+    Pos = Vector(-6.68, -8, 3.75),
+    Ang = Angle(0.25, 0.01, 0),
     Magnification = 1.3,
 }
 

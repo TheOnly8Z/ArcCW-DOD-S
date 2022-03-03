@@ -67,15 +67,15 @@ SWEP.MagID = "mg42" -- the magazine pool this gun draws from
 SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 90 -- pitch of shoot sound
 
-SWEP.ShootSound = "^weapons/mg42_shoot.wav"
+SWEP.ShootSound = "ArcCW_DOD_MG42.Shoot"
 SWEP.ShootSoundSilenced = nil --"weapons/arccw/m4a1/m4a1_silencer_01.wav"
 SWEP.DistantShootSound = nil --"weapons/mg42_shoot.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_minimi"
 
-SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellModel = "models/shells/shell_762nato.mdl"
 SWEP.ShellPitch = 90
-SWEP.ShellScale = 1
+SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -98,7 +98,7 @@ SWEP.BulletBones = {
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.62, -9, 0.519),
+    Pos = Vector(-3.62, -6, 0.57),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "" -- sound that plays when switching to this sight

@@ -46,7 +46,7 @@ SWEP.Primary.ClipSize = 8 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 12
 SWEP.ReducedClipSize = 6
 
-SWEP.Recoil = 1
+SWEP.Recoil = 0.85
 SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 1.25
 
@@ -100,7 +100,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-5.7, -2.5, 4.0),
+    Pos = Vector(-5.69, -2.5, 4.03),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight

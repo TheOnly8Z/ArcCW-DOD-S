@@ -44,13 +44,13 @@ SWEP.TracerWidth = 3
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 8 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 8
-SWEP.ReducedClipSize = 4
+SWEP.ReducedClipSize = 8
 
 SWEP.Recoil = 1.6
 SWEP.RecoilSide = 0.7
 SWEP.RecoilRise = 1.5
 
-SWEP.Delay = 60 / 300 -- 60 / RPM.
+SWEP.Delay = 60 / 240 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -90,7 +90,7 @@ SWEP.CaseEffectAttachment = 3 -- which attachment to put the case effect on
 SWEP.SpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.5
 
-SWEP.RevolverReload = true
+SWEP.RevolverReload = false
 SWEP.BulletBones = {
     [1] = "ValveBiped.bul1",
     [2] = "ValveBiped.bul2",
@@ -109,7 +109,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos =  Vector(-6.95, -2, 5.09),
+    Pos =  Vector(-6.94, -1, 5.15),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight

@@ -77,14 +77,14 @@ SWEP.DistantShootSound = nil --"weapons/arccw/ak47/ak47-1-distant.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_smg"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1.75
+SWEP.ShellScale = 1.85
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
-SWEP.SpeedMult = 0.98
+SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.28
+SWEP.SightTime = 0.36
 SWEP.VisualRecoilMult = 1
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
@@ -98,7 +98,7 @@ SWEP.ProceduralIronFire = true
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-4.52, -4.75, 1.8),
+    Pos = Vector(-4.52, -4.75, 2.06),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
