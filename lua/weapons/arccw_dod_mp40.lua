@@ -41,7 +41,7 @@ SWEP.TracerWidth = 3
 SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 32 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 48
-SWEP.ReducedClipSize = 16
+SWEP.ReducedClipSize = 20
 
 SWEP.Recoil = 0.45
 SWEP.RecoilSide = 0.3
@@ -78,7 +78,6 @@ SWEP.DistantShootSound = nil --"weapons/arccw/ak47/ak47-1-distant.wav"
 SWEP.MuzzleEffect = "muzzleflash_smg"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1.5
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -101,8 +100,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-4.4, -10, 1.8),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-4.41, -9, 1.84),
+    Ang = Angle(0.5, -0.11, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }

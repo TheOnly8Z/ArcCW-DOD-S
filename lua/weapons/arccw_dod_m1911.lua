@@ -50,11 +50,11 @@ SWEP.TracerWidth = 3
 
 SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 7 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 10
-SWEP.ReducedClipSize = 5
+SWEP.ExtendedClipSize = 9
+SWEP.ReducedClipSize = 6
 
-SWEP.Recoil = 0.9
-SWEP.RecoilSide = 0.3
+SWEP.Recoil = 1.85
+SWEP.RecoilSide = 0.85
 SWEP.RecoilRise = 2
 
 SWEP.Delay = 60 / 500 -- 60 / RPM.
@@ -89,7 +89,7 @@ SWEP.DistantShootSound = nil --"weapons/arccw/hkp2000/hkp2000-1-distant.wav"
 
 SWEP.MuzzleEffect = "muzzleflash_pistol"
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1.5
+SWEP.ShellScale = 1.75
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
@@ -112,7 +112,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.85, -6, 3.68),
+    Pos = Vector(-3.85, -2.5, 3.6),
     Ang = Angle(0.449, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
