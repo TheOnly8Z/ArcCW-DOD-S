@@ -19,8 +19,8 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_dod_bazooka.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_bazooka.mdl"
 
-SWEP.Damage = 200
-SWEP.DamageMin = 75 -- damage done at maximum range
+SWEP.Damage = 5000
+SWEP.DamageMin = 5000 -- damage done at maximum range
 SWEP.Range = 150 -- in METRES
 SWEP.Penetration = 120
 SWEP.DamageType = DMG_BULLET
@@ -113,12 +113,12 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.CanBash = true
 
-SWEP.MeleeDamage = 25
+SWEP.MeleeDamage = 47
 SWEP.MeleeRange = 16
 SWEP.MeleeDamageType = DMG_CLUB
-SWEP.MeleeTime = 0.5
+SWEP.MeleeTime = 1
 SWEP.MeleeGesture = nil
-SWEP.MeleeAttackTime = 0.2
+SWEP.MeleeAttackTime = 1
 
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -186,17 +186,6 @@ SWEP.Attachments = {
             vang = Angle(90, 0, 0),
             wpos = Vector(12, 1, -3.75),
             wang = Angle(-10.216, 0, 180)
-        },
-    },
-    {
-        PrintName = "Tactical",
-        Slot = "tac",
-        Bone = "ValveBiped.bazooka_BASE",
-        Offset = {
-            vpos = Vector(-4.4, -1, 0),
-            vang = Angle(90, 0, 90),
-            wpos = Vector(1, 2.5, -3),
-            wang = Angle(-10.393, 0, -90)
         },
     },
     {
