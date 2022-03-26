@@ -19,8 +19,8 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arccw/c_dod_panzerschreck.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_dod_panzerschreck.mdl"
 
-SWEP.Damage = 200
-SWEP.DamageMin = 75 -- damage done at maximum range
+SWEP.Damage = 2000
+SWEP.DamageMin = 2000 -- damage done at maximum range
 SWEP.Range = 150 -- in METRES
 SWEP.Penetration = 180
 SWEP.DamageType = DMG_BULLET
@@ -112,12 +112,12 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.CanBash = true
 
-SWEP.MeleeDamage = 25
+SWEP.MeleeDamage = 47
 SWEP.MeleeRange = 16
 SWEP.MeleeDamageType = DMG_CLUB
-SWEP.MeleeTime = 0.5
+SWEP.MeleeTime = 1
 SWEP.MeleeGesture = nil
-SWEP.MeleeAttackTime = 0.2
+SWEP.MeleeAttackTime = 1
 
 SWEP.ActivePos = Vector(-3, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)

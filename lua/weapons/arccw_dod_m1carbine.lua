@@ -60,7 +60,7 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.NPCWeaponType = "weapon_ar2"
+SWEP.NPCWeaponType = "weapon_smg1"
 SWEP.NPCWeight = 170
 
 SWEP.AccuracyMOA = 7 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.

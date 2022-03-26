@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - DOD:S" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Annihilator .45"
+SWEP.PrintName = "Annihilator .45 Mark II"
 SWEP.TrueName = "M1A1 Thompson"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "Expensive automatic SMG used in WWII by the US and Allies before shifting towards cheaper alternatives. For a premium, it offers great firepower - though it is difficult to control."
@@ -11,7 +11,7 @@ SWEP.Trivia_Manufacturer = "Auto-Ordnance"
 SWEP.Trivia_Calibre = ".45 ACP"
 SWEP.Trivia_Mechanism = "Blowback"
 SWEP.Trivia_Country = "United States of America"
-SWEP.Trivia_Year = 1920
+SWEP.Trivia_Year = 1942
 
 SWEP.Slot = 2
 
@@ -58,7 +58,7 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.NPCWeaponType = "weapon_ar2"
+SWEP.NPCWeaponType = "weapon_smg1"
 SWEP.NPCWeight = 200
 
 SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
@@ -98,8 +98,8 @@ SWEP.ProceduralIronFire = true
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-4.52, -4.75, 2.06),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-4.525, -4.75, 1.78),
+    Ang = Angle(0.65, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -144,8 +144,8 @@ SWEP.AttachmentElements = {
     },
     ["altirons"] = {
         Override_IronSightStruct = {
-            Pos = Vector(-4.526, -6.231, 2.055),
-            Ang = Angle(0, 0.05, 0),
+            Pos = Vector(-4.526, -4.75, 2.03),
+            Ang = Angle(0.2, 0, 0),
             Magnification = 1.5,
         }
     },

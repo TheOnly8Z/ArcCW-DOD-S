@@ -55,7 +55,7 @@ SWEP.Firemodes = {
     },
 }
 
-SWEP.NPCWeaponType = {"weapon_ar2"}
+SWEP.NPCWeaponType = {"weapon_rpg"}
 SWEP.NPCWeight = 20
 
 SWEP.AccuracyMOA = 12 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
@@ -134,8 +134,8 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Bipod_Integral = true
-SWEP.BipodRecoil = 0.1
-SWEP.BipodDispersion = 0.2
+SWEP.BipodRecoil = 0.5
+SWEP.BipodDispersion = 0.66
 
 SWEP.ShellRotateAngle = Angle(0, 0, 0)
 
